@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Login | SBNL Holidays</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+      body {
+        background: linear-gradient(135deg, #1e3a8a, #2563eb, #0ea5e9);
+      }
+      .glass {
+        background: rgba(255, 255, 255, 0.1);
+        backdrop-filter: blur(20px);
+        border: 1px solid rgba(255, 255, 255, 0.2);
+      }
+    </style>
+  </head>
+
+  <body class="h-screen flex items-center justify-center">
+    <div
+      class="glass p-10 rounded-3xl shadow-2xl w-[380px] text-white text-center"
+    >
+      <h2 class="text-3xl font-bold mb-6">🔐 Admin Portal</h2>
+
+      <input
+        id="email"
+        type="email"
+        placeholder="Email"
+        class="w-full p-3 mb-4 rounded-lg bg-white/20 placeholder-white outline-none"
+      />
+
+      <input
+        id="password"
+        type="password"
+        placeholder="Password"
+        class="w-full p-3 mb-6 rounded-lg bg-white/20 placeholder-white outline-none"
+      />
+
+      <button
+        onclick="login()"
+        class="w-full bg-white text-blue-700 font-bold py-3 rounded-lg hover:scale-105 transition"
+      >
+        Login
+      </button>
+      <a
+        href="index.html"
+        class="block mt-4 text-white/80 hover:text-white underline text-sm"
+      >
+        ← Back to Homepage
+      </a>
+
+      <p id="msg" class="mt-4 text-red-200"></p>
+    </div>
+
+    <script>
+      async function login() {
+        const res = await fetch(
+          "https://sbnl-website.onrender.com/api/admin/login",
+          {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({
+              email: email.value,
+              password: password.value,
+            }),
+          },
+        );
+
+        const data = await res.json();
+
+        if (data.token) {
+          localStorage.setItem("adminToken", data.token);
+          window.location.href = "admin.html";
+        } else {
+          msg.innerText = "Invalid email or password!";
+        }
+      }
+    </script>
+  </body>
+</html>

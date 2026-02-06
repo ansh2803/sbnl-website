@@ -1,0 +1,308 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Bangkok Tour</title>
+    <link rel="icon" type="image/svg+xml" href="../favicon/favicon.svg" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#F97316",
+              secondary: "#EA580C",
+              accent: "#1D4ED8",
+              dark: "#1F2937",
+            },
+          },
+        },
+      };
+    </script>
+
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "Playfair Display", serif;
+      }
+
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+  </head>
+
+  <body class="bg-white text-dark">
+    <!-- MAIN NAVBAR -->
+    <header class="sticky top-0 z-50 bg-white shadow-sm">
+      <nav class="container mx-auto px-4 py-4">
+        <div class="flex justify-between items-center">
+          <!-- Logo -->
+          <div class="flex items-center">
+            <div
+              class="relative w-10 h-10 md:w-14 md:h-14 rounded-full overflow-hidden transition-transform duration-500 hover:scale-105"
+            >
+              <img
+                src="../assets/images/SBNL-LOGO.png"
+                alt="SBNL Logo"
+                class="absolute inset-0 w-full h-full object-cover scale-[1.5]"
+              />
+            </div>
+            <div class="text-2xl font-bold text-primary">
+              <span class="text-secondary">SBNL</span> Holidays Pvt. Ltd.
+            </div>
+          </div>
+          <!-- Desktop Navigation -->
+          <div class="hidden lg:flex items-center space-x-8">
+            <a
+              href="../index.html"
+              class="nav-link text-dark hover:text-primary"
+              >Home</a
+            >
+            <a
+              href="../about.html"
+              class="nav-link text-dark hover:text-primary"
+              >About</a
+            >
+            <a href="../foco.html" class="nav-link text-dark hover:text-primary"
+              >FOCO Model</a
+            >
+            <a
+              href="../investment.html"
+              class="nav-link text-dark hover:text-primary"
+              >Package Offer</a
+            >
+            <a
+              href="../contact.html"
+              class="nav-link text-dark hover:text-primary"
+              >Contact</a
+            >
+          </div>
+          <!-- Mobile Menu Button -->
+          <button class="lg:hidden text-dark" id="mobileMenuButton">
+            <i class="fas fa-bars text-2xl"></i>
+          </button>
+        </div>
+        <!-- Mobile Navigation -->
+        <div
+          class="lg:hidden hidden mt-4 bg-white rounded-lg shadow-lg p-4"
+          id="mobileMenu"
+        >
+          <div class="flex flex-col space-y-3">
+            <a href="index.html">Home</a> <a href="about.html">About</a>
+            <a href="foco.html">FOCO Model</a>
+            <a href="investment.html">Package Offer</a>
+            <a href="contact.html">Contact</a>
+            <div class="pt-4 border-t">
+              <button
+                class="w-full mb-2 px-4 py-2 bg-primary text-white rounded-lg hover:bg-secondary transition-colors"
+              >
+                Search
+              </button>
+              <button
+                class="w-full px-4 py-2 bg-white text-primary border border-primary rounded-lg hover:bg-orange-50 transition-colors"
+              >
+                Enquire Now
+              </button>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- SECTION NAV -->
+    <nav class="bg-white shadow sticky top-16 z-40">
+      <div
+        class="max-w-6xl mx-auto px-6 py-4 flex justify-center gap-10 font-semibold"
+      >
+        <a href="#details" class="hover:text-primary">Details</a>
+        <a href="#attractions" class="hover:text-primary">Attractions</a>
+        <a href="#things" class="hover:text-primary">Things To Do</a>
+      </div>
+    </nav>
+
+    <!-- DETAILS -->
+    <section id="details" class="min-h-screen px-6 py-16 bg-orange">
+      <div class="max-w-6xl grid md:grid-cols-2 gap-12 items-center">
+        <img
+          src="../assets/images/bangkok.jpg"
+          class="rounded-2xl shadow-2xl hover:scale-105 transition"
+        />
+
+        <div class="bg-white p-8 rounded-2xl shadow-xl">
+          <h2 class="text-4xl font-bold mb-4 text-primary">
+            Bangkok Tour Package
+          </h2>
+          <p class="text-gray-600 mb-6">
+            Dive into Thailand’s vibrant capital filled with temples, street
+            food, floating markets, and electric nightlife.
+          </p>
+
+          <div class="flex gap-6 mb-6">
+            <div class="bg-primary text-white px-5 py-3 rounded-xl">
+              <p class="text-sm">Price</p>
+              <p class="text-xl font-bold">₹60,000 / Person</p>
+            </div>
+
+            <div class="bg-blue-600 text-white px-5 py-3 rounded-xl">
+              <p class="text-sm">Duration</p>
+              <p class="text-xl font-bold">3 Nights / 4 Days</p>
+            </div>
+          </div>
+
+          <ul class="space-y-2 text-gray-700">
+            <li>✈️ Return Air Tickets</li>
+            <li>🏨 Hotel Accommodation</li>
+            <li>🍜 Daily Breakfast</li>
+            <li>🚗 All Transfers</li>
+            <li>🛕 Sightseeing Tours</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- ATTRACTIONS -->
+    <section id="attractions" class="py-20 bg-white">
+      <div class="max-w-6xl mx-auto px-6 text-center">
+        <h2 class="text-4xl font-bold mb-4">Top Bangkok Attractions</h2>
+        <p class="text-gray-600 mb-12">Culture, nightlife & iconic landmarks</p>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <div
+            class="bg-orange-50 rounded-2xl shadow-lg overflow-hidden hover:-translate-y-2 transition"
+          >
+            <img
+              src="../assets/images/attractions/grand-palace.webp"
+              class="h-52 w-full object-cover"
+            />
+            <div class="p-5">
+              <h3 class="font-bold">Grand Palace</h3>
+              <p class="text-sm text-gray-600">Historic royal complex</p>
+            </div>
+          </div>
+
+          <div
+            class="bg-orange-50 rounded-2xl shadow-lg overflow-hidden hover:-translate-y-2 transition"
+          >
+            <img
+              src="../assets/images/attractions/wat-arun.jpg"
+              class="h-52 w-full object-cover"
+            />
+            <div class="p-5">
+              <h3 class="font-bold">Wat Arun</h3>
+              <p class="text-sm text-gray-600">Temple of Dawn</p>
+            </div>
+          </div>
+
+          <div
+            class="bg-orange-50 rounded-2xl shadow-lg overflow-hidden hover:-translate-y-2 transition"
+          >
+            <img
+              src="../assets/images/attractions/khaosan.jpg"
+              class="h-52 w-full object-cover"
+            />
+            <div class="p-5">
+              <h3 class="font-bold">Khaosan Road</h3>
+              <p class="text-sm text-gray-600">Nightlife & street culture</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    
+
+    <!-- THINGS TO DO -->
+    <section id="things" class="py-20 bg-white">
+      <div class="max-w-6xl mx-auto px-6 text-center">
+        <h2 class="text-4xl font-bold mb-12">Things To Do in Bangkok</h2>
+
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="relative rounded-2xl overflow-hidden shadow-xl group">
+            <img
+              src="../assets/images/things-to-do/street-food.jpg"
+              class="h-60 w-full object-cover group-hover:scale-110 transition"
+            />
+            <div
+              class="absolute bottom-0 w-full bg-black/50 text-white py-3 font-semibold"
+            >
+              Street Food Tour
+            </div>
+          </div>
+
+          <div class="relative rounded-2xl overflow-hidden shadow-xl group">
+            <img
+              src="../assets/images/things-to-do/floating-market.jpg"
+              class="h-60 w-full object-cover group-hover:scale-110 transition"
+            />
+            <div
+              class="absolute bottom-0 w-full bg-black/50 text-white py-3 font-semibold"
+            >
+              Floating Market
+            </div>
+          </div>
+
+          <div class="relative rounded-2xl overflow-hidden shadow-xl group">
+            <img
+              src="../assets/images/things-to-do/night-river-cuisine.jpg"
+              class="h-60 w-full object-cover group-hover:scale-110 transition"
+            />
+            <div
+              class="absolute bottom-0 w-full bg-black/50 text-white py-3 font-semibold"
+            >
+              Night River Cruise
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+     <!-- BOOK BUTTON -->
+    <button
+      onclick="window.location.href = 'contact.html?id=' + id"
+      class="fixed bottom-8 right-8 bg-blue-600 text-white px-6 py-4 rounded-full shadow-2xl hover:scale-110 transition"
+    >
+      Book Now ✈️
+    </button>
+    <script>
+      const menuBtn = document.getElementById("menuBtn");
+      const mobileMenu = document.getElementById("mobileMenu");
+      menuBtn.addEventListener("click", () =>
+        mobileMenu.classList.toggle("hidden"),
+      );
+    </script>
+    <script>
+      fetch("../header.html")
+        .then((res) => res.text())
+        .then((data) => {
+          document.getElementById("header").innerHTML = data;
+
+          // Re-attach mobile menu toggle after loading
+          const mobileMenuButton = document.getElementById("mobileMenuButton");
+          const mobileMenu = document.getElementById("mobileMenu");
+
+          if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener("click", () => {
+              mobileMenu.classList.toggle("hidden");
+            });
+          }
+        });
+    </script>
+  </body>
+</html>

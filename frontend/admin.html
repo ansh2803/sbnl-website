@@ -1,0 +1,360 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Admin Panel | SBNL Holidays</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <style>
+      body {
+        background: linear-gradient(135deg, #e0f2fe, #f8fafc);
+      }
+      .glass {
+        background: rgba(255, 255, 255, 0.7);
+        backdrop-filter: blur(12px);
+      }
+    </style>
+  </head>
+
+  <body class="min-h-screen">
+    <!-- HEADER -->
+    <header
+      class="bg-gradient-to-r from-blue-600 to-cyan-500 text-white py-4 px-8 flex justify-between items-center shadow-lg"
+    >
+      <h1 class="text-2xl font-bold">🛠 SBNL Admin Dashboard</h1>
+      <button
+        onclick="logout()"
+        class="bg-white text-blue-600 px-4 py-2 rounded-lg font-semibold hover:scale-105 transition"
+      >
+        Logout
+      </button>
+    </header>
+
+    <div class="max-w-6xl mx-auto py-10 px-6">
+      <!-- FORM CARD -->
+      <div class="glass p-8 rounded-3xl shadow-xl mb-12">
+        <h2 class="text-2xl font-bold mb-6 text-blue-700">
+          ➕ Add / Edit Travel Package
+        </h2>
+
+        <form id="packageForm" class="grid md:grid-cols-2 gap-6">
+          <input type="hidden" id="packageId" />
+
+          <input
+            type="text"
+            id="title"
+            placeholder="Package Title"
+            class="border p-3 rounded-lg"
+          />
+          <input
+            type="text"
+            id="location"
+            placeholder="Location"
+            class="border p-3 rounded-lg"
+          />
+
+          <textarea
+            id="description"
+            placeholder="Package Description"
+            class="border p-3 rounded-lg md:col-span-2"
+          ></textarea>
+
+          <input
+            type="number"
+            id="price"
+            placeholder="Original Price"
+            class="border p-3 rounded-lg"
+          />
+          <input
+            type="number"
+            id="offerPrice"
+            placeholder="Offer Price"
+            class="border p-3 rounded-lg"
+          />
+
+          <input type="file" id="image" class="md:col-span-2" />
+
+          <input
+            type="file"
+            id="galleryImages"
+            multiple
+            class="md:col-span-2"
+          />
+
+          <textarea
+            id="includes"
+            placeholder="Includes (comma separated)"
+            class="border p-3 rounded-lg md:col-span-2"
+          ></textarea>
+          <textarea
+            id="thingsToDo"
+            placeholder="Things To Do"
+            class="border p-3 rounded-lg md:col-span-2"
+          ></textarea>
+          <textarea
+            id="attractions"
+            placeholder="Top Attractions"
+            class="border p-3 rounded-lg md:col-span-2"
+          ></textarea>
+
+          <button
+            type="submit"
+            class="md:col-span-2 bg-blue-600 text-white py-3 rounded-xl font-bold hover:scale-105 transition"
+          >
+            Save Package
+          </button>
+        </form>
+      </div>
+
+      <!-- TABLE -->
+      <div class="glass p-8 rounded-3xl shadow-xl">
+        <h2 class="text-2xl font-bold mb-6 text-blue-700">📦 All Packages</h2>
+
+        <table class="w-full border-collapse">
+          <thead class="bg-blue-100">
+            <tr>
+              <th class="p-3">Image</th>
+              <th class="p-3">Title</th>
+              <th class="p-3">Location</th>
+              <th class="p-3">Price</th>
+              <th class="p-3">Actions</th>
+            </tr>
+          </thead>
+          <tbody id="adminPackageTable"></tbody>
+        </table>
+      </div>
+    </div>
+    <script>
+  const BASE_URL = "https://sbnl-website.onrender.com";
+
+  if (!localStorage.getItem("adminToken"))
+    window.location.href = "admin-login.html";
+
+  function logout() {
+    localStorage.removeItem("adminToken");
+    window.location.href = "admin-login.html";
+  }
+
+  document.getElementById("packageForm").addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const id = packageId.value;
+    const token = localStorage.getItem("adminToken");
+
+    const formData = new FormData();
+    [
+      "title","location","description","price","offerPrice",
+      "includes","thingsToDo","attractions"
+    ].forEach((field) =>
+      formData.append(field, document.getElementById(field).value)
+    );
+
+    if (image.files.length) formData.append("image", image.files[0]);
+    if (galleryImages.files.length) {
+      for (let file of galleryImages.files) formData.append("galleryImages", file);
+    }
+
+    let url = `${BASE_URL}/api/packages`;
+    let method = "POST";
+    if (id) {
+      url += `/${id}`;
+      method = "PUT";
+    }
+
+    const res = await fetch(url, {
+      method,
+      headers: { Authorization: `Bearer ${token}` },
+      body: formData,
+    });
+
+    const data = await res.json();
+    if (res.ok) {
+      alert("Saved!");
+      location.reload();
+    } else {
+      alert("Error: " + (data.error || "Failed"));
+    }
+  });
+
+  async function loadAdminPackages() {
+    const token = localStorage.getItem("adminToken");
+    const res = await fetch(`${BASE_URL}/api/packages`, {
+      headers: { Authorization: `Bearer ${token}` },
+    });
+
+    const data = await res.json();
+    adminPackageTable.innerHTML = "";
+
+    data.forEach((pkg) => {
+      adminPackageTable.innerHTML += `
+        <tr class="border hover:bg-blue-50">
+          <td class="p-2">
+            <img src="${BASE_URL}/uploads/${pkg.image}" class="w-16 h-12 object-cover rounded">
+          </td>
+          <td class="p-2">${pkg.title}</td>
+          <td class="p-2">${pkg.location}</td>
+          <td class="p-2">₹${pkg.offerPrice}</td>
+          <td class="p-2 space-x-2">
+            <button onclick="editPackage('${pkg._id}')" class="bg-blue-500 text-white px-3 py-1 rounded">Edit</button>
+            <button onclick="deletePackage('${pkg._id}')" class="bg-red-500 text-white px-3 py-1 rounded">Delete</button>
+          </td>
+        </tr>`;
+    });
+  }
+
+  async function deletePackage(id) {
+    const token = localStorage.getItem("adminToken");
+    await fetch(`${BASE_URL}/api/packages/${id}`, {
+      method: "DELETE",
+      headers: { Authorization: `Bearer ${token}` },
+    });
+    loadAdminPackages();
+  }
+
+  async function editPackage(id) {
+    const token = localStorage.getItem("adminToken");
+    const res = await fetch(`${BASE_URL}/api/packages/${id}`, {
+      headers: { Authorization: `Bearer ${token}` },
+    });
+
+    const pkg = await res.json();
+    packageId.value = pkg._id;
+    title.value = pkg.title;
+    location.value = pkg.location;
+    description.value = pkg.description;
+    price.value = pkg.price;
+    offerPrice.value = pkg.offerPrice;
+    includes.value = pkg.includes.join(",");
+    thingsToDo.value = pkg.thingsToDo.join(",");
+    attractions.value = pkg.attractions.join(",");
+    window.scrollTo({ top: 0, behavior: "smooth" });
+  }
+
+  loadAdminPackages();
+</script>
+
+
+    <script>
+      
+//       if (!localStorage.getItem("adminToken"))
+//         window.location.href = "admin-login.html";
+
+//       function logout() {
+//         localStorage.removeItem("adminToken");
+//         window.location.href = "admin-login.html";
+//       }
+
+//       document
+//         .getElementById("packageForm")
+//         .addEventListener("submit", async (e) => {
+//           e.preventDefault();
+//           const id = packageId.value;
+//           const token = localStorage.getItem("adminToken");
+
+//           const formData = new FormData();
+//           [
+//             "title",
+//             "location",
+//             "description",
+//             "price",
+//             "offerPrice",
+//             "includes",
+//             "thingsToDo",
+//             "attractions",
+//           ].forEach((id) =>
+//             formData.append(id, document.getElementById(id).value),
+//           );
+
+//           const heroInput = document.getElementById("image");
+//           const galleryInput = document.getElementById("galleryImages");
+//           if (heroInput.files.length > 0) {
+//             formData.append("image", heroInput.files[0]);
+//           }
+//           if (galleryInput.files.length > 0) {
+//             for (let i = 0; i < galleryInput.files.length; i++) {
+//               formData.append("galleryImages", galleryInput.files[i]);
+//             }
+//           }
+
+//           let url = "https://sbnl-website.onrender.com/api/packages";
+//           let method = "POST";
+//           if (id) {
+//             url += `/${id}`;
+//             method = "PUT";
+//           }
+
+//           const res = await https://sbnl-website.onrender.com/(url, {
+//             method,
+//             headers: { Authorization: `Bearer ${token}` },
+//             body: formData,
+//           });
+//           const data = await res.json();
+// console.log("SERVER RESPONSE:", data);
+
+//           if (res.ok) {
+//             alert("Saved!");
+//             location.reload();
+//           } else {
+//             alert("Error: " + (data.error || "Failed to save package."));
+//           }
+//         });
+
+//       async function loadAdminPackages() {
+//         const token = localStorage.getItem("adminToken");
+//         const res = await https://sbnl-website.onrender.com/("https://sbnl-website.onrender.com/api/packages", {
+//           headers: { Authorization: `Bearer ${token}` },
+//         });
+//         const data = await res.json();
+
+//         adminPackageTable.innerHTML = "";
+//         data.forEach((pkg) => {
+//           adminPackageTable.innerHTML += `
+//       <tr class="border hover:bg-blue-50 transition">
+//         <td class="p-2"><img src="https://sbnl-website.onrender.com/uploads/${pkg.image}" class="w-16 h-12 object-cover rounded"></td>
+//         <td class="p-2">${pkg.title}</td>
+//         <td class="p-2">${pkg.location}</td>
+//         <td class="p-2">₹${pkg.offerPrice}</td>
+//         <td class="p-2 space-x-2">
+//           <button onclick="editPackage('${pkg._id}')" class="bg-blue-500 text-white px-3 py-1 rounded">Edit</button>
+//           <button onclick="deletePackage('${pkg._id}')" class="bg-red-500 text-white px-3 py-1 rounded">Delete</button>
+//         </td>
+//       </tr>`;
+//         });
+//       }
+
+//       async function deletePackage(id) {
+//         const token = localStorage.getItem("adminToken");
+//         const res = await https://sbnl-website.onrender.com/(`https://sbnl-website.onrender.com/api/packages/${id}`, {
+//           method: "DELETE",
+//           headers: { Authorization: `Bearer ${token}` },
+//         });
+//         if (res.ok) loadAdminPackages();
+//         else {
+//           const data = await res.json();
+//           alert("Error: " + (data.error || "Failed to delete"));
+//         }
+//       }
+
+//       async function editPackage(id) {
+//         const token = localStorage.getItem("adminToken");
+//         const res = await fetch(`http://https://sbnl-website.onrender.com//api/packages/${id}`, {
+//           headers: { Authorization: `Bearer ${token}` },
+//         });
+//         const pkg = await res.json();
+
+//         packageId.value = pkg._id;
+//         title.value = pkg.title;
+//         location.value = pkg.location;
+//         description.value = pkg.description;
+//         price.value = pkg.price;
+//         offerPrice.value = pkg.offerPrice;
+//         includes.value = pkg.includes.join(",");
+//         thingsToDo.value = pkg.thingsToDo.join(",");
+//         attractions.value = pkg.attractions.join(",");
+//         window.scrollTo({ top: 0, behavior: "smooth" });
+//       }
+
+//       loadAdminPackages();
+    </script>
+  </body>
+</html>

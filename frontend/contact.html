@@ -1,0 +1,470 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact & Apply | SBNL Holidays</title>
+    <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#F97316", // ORANGE
+              secondary: "#EA580C", // DARK ORANGE
+              accent: "#1D4ED8", // BLUE (small highlights only)
+              dark: "#1F2937",
+              light: "#FFFFFF",
+            },
+          },
+        },
+      };
+    </script>
+
+    <style>
+      /* ===== SMOOTH REVEAL ===== */
+      body {
+        font-family: "Poppins", sans-serif;
+      }
+      .fade-up {
+        opacity: 0;
+        transform: translateY(60px) scale(0.95);
+        transition: all 1s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+      }
+      .fade-up.show {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+
+      @keyframes glowPulse {
+        from {
+          text-shadow: 0 0 10px rgba(250, 204, 21, 0.4);
+        }
+        to {
+          text-shadow: 0 0 25px rgba(250, 204, 21, 0.8);
+        }
+      }
+
+      /* ===== PREMIUM 3D CARD ===== */
+      .premium-card {
+        transition: all 0.4s ease;
+        transform: perspective(1000px) rotateX(0) rotateY(0);
+      }
+      .premium-card:hover {
+        transform: perspective(1000px) rotateX(4deg) rotateY(-4deg) scale(1.04);
+        box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+      }
+
+      /* ===== ANIMATED BLOBS ===== */
+      .bg-blob {
+        position: absolute;
+        border-radius: 9999px;
+        filter: blur(80px);
+        opacity: 0.25;
+        animation: blobMove 18s infinite alternate ease-in-out;
+      }
+      .bg-blob:nth-child(1) {
+        width: 300px;
+        height: 300px;
+        background: #f97316;
+        top: -50px;
+        left: -50px;
+      }
+      .bg-blob:nth-child(2) {
+        width: 350px;
+        height: 350px;
+        background: #ea580c;
+        bottom: -80px;
+        right: -60px;
+        animation-delay: 4s;
+      }
+      @keyframes blobMove {
+        0% {
+          transform: translateY(0) translateX(0);
+        }
+        100% {
+          transform: translateY(60px) translateX(40px);
+        }
+      }
+    </style>
+  </head>
+
+  <body class="bg-white text-dark">
+    <!-- NAVBAR -->
+    <div id="header"></div>
+    <!-- HERO -->
+    <section
+      class="py-20 bg-gradient-to-br from-primary to-secondary text-white relative overflow-hidden"
+    >
+      <div class="bg-blob"></div>
+      <div class="bg-blob"></div>
+
+      <div class="max-w-5xl mx-auto px-6 text-center fade-up">
+        <h1 class="text-4xl md:text-5xl font-extrabold text-white">
+          📩 Contact & Apply Now
+        </h1>
+        <p class="mt-4 text-lg">
+          Become an Area Distributor with SBNL Holidays and build a powerful
+          travel business
+        </p>
+      </div>
+    </section>
+
+    <!-- Book your travel package -->
+     <section class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-6 text-center">
+    <h2 class="text-4xl font-extrabold text-dark mb-4">
+      ✈️ Book Your Dream Travel Package
+    </h2>
+    <p class="text-gray-600 max-w-3xl mx-auto mb-12">
+      Whether it’s a honeymoon, family holiday, luxury international tour or a customized trip —
+      SBNL Holidays brings you trusted, affordable and unforgettable travel experiences.
+    </p>
+
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="p-8 border rounded-2xl shadow-lg hover:shadow-2xl transition">
+        <i class="fas fa-heart text-4xl text-primary mb-4"></i>
+        <h3 class="text-xl font-bold mb-2">Honeymoon Packages</h3>
+        <p class="text-gray-600">
+          Romantic destinations like Bali, Maldives, Paris & Switzerland.
+        </p>
+      </div>
+
+      <div class="p-8 border rounded-2xl shadow-lg hover:shadow-2xl transition">
+        <i class="fas fa-users text-4xl text-primary mb-4"></i>
+        <h3 class="text-xl font-bold mb-2">Family Holidays</h3>
+        <p class="text-gray-600">
+          Stress-free family tours with hotels, sightseeing & transfers included.
+        </p>
+      </div>
+
+      <div class="p-8 border rounded-2xl shadow-lg hover:shadow-2xl transition">
+        <i class="fas fa-gem text-4xl text-primary mb-4"></i>
+        <h3 class="text-xl font-bold mb-2">Luxury International Tours</h3>
+        <p class="text-gray-600">
+          Dubai, Europe, Thailand & premium international destinations.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<!--why book with sbnl-->
+<section class="py-20 bg-orange-50">
+  <div class="max-w-7xl mx-auto px-6 text-center">
+    <h2 class="text-4xl font-extrabold mb-12 text-dark">
+      ⭐ Why Book With SBNL Holidays?
+    </h2>
+
+    <div class="grid md:grid-cols-4 gap-8">
+      <div class="p-6">
+        <i class="fas fa-shield-alt text-3xl text-primary mb-4"></i>
+        <h4 class="font-bold text-lg mb-2">Trusted Company</h4>
+        <p class="text-gray-600">Professionally managed travel brand with pan-India presence.</p>
+      </div>
+
+      <div class="p-6">
+        <i class="fas fa-tags text-3xl text-primary mb-4"></i>
+        <h4 class="font-bold text-lg mb-2">Best Price Guarantee</h4>
+        <p class="text-gray-600">Direct rates, no hidden charges, transparent pricing.</p>
+      </div>
+
+      <div class="p-6">
+        <i class="fas fa-headset text-3xl text-primary mb-4"></i>
+        <h4 class="font-bold text-lg mb-2">24/7 Support</h4>
+        <p class="text-gray-600">Dedicated support before, during & after your trip.</p>
+      </div>
+
+      <div class="p-6">
+        <i class="fas fa-route text-3xl text-primary mb-4"></i>
+        <h4 class="font-bold text-lg mb-2">Customized Trips</h4>
+        <p class="text-gray-600">Tailor-made itineraries designed for your budget & comfort.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<!--how booking works-->
+<section class="py-20 bg-white">
+  <div class="max-w-6xl mx-auto px-6 text-center">
+    <h2 class="text-4xl font-extrabold mb-12 text-dark">
+      🧭 How Your Travel Booking Works
+    </h2>
+
+    <div class="grid md:grid-cols-4 gap-6">
+      <div class="p-6 border rounded-xl">
+        <span class="text-primary font-bold text-xl">01</span>
+        <h4 class="font-bold mt-2">Submit Enquiry</h4>
+        <p class="text-gray-600">Tell us your destination, budget & dates.</p>
+      </div>
+
+      <div class="p-6 border rounded-xl">
+        <span class="text-primary font-bold text-xl">02</span>
+        <h4 class="font-bold mt-2">Get Best Options</h4>
+        <p class="text-gray-600">Our experts share multiple package options.</p>
+      </div>
+
+      <div class="p-6 border rounded-xl">
+        <span class="text-primary font-bold text-xl">03</span>
+        <h4 class="font-bold mt-2">Confirm Booking</h4>
+        <p class="text-gray-600">Secure booking with transparent pricing.</p>
+      </div>
+
+      <div class="p-6 border rounded-xl">
+        <span class="text-primary font-bold text-xl">04</span>
+        <h4 class="font-bold mt-2">Enjoy Your Trip</h4>
+        <p class="text-gray-600">Relax while we handle everything.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+    <!-- CONTENT -->
+    <section class="py-16">
+      <div class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12">
+        <!-- LEFT INFO -->
+        <div class="fade-up premium-card">
+          <h2 class="text-3xl font-bold mb-6 text-primary">📞 Get in Touch</h2>
+          <p class="text-gray-600 mb-6">
+            Our team will guide you through the FOCO business model and
+            investment process.
+          </p>
+          <div class="space-y-4 text-lg">
+            <p>
+              <b>Call:</b>
+              <a href="tel:9599727060" class="text-primary font-semibold"
+                >9599727060</a
+              >
+            </p>
+            <p>
+              <b>WhatsApp:</b>
+              <a
+                href="https://wa.me/919837066698"
+                target="_blank"
+                class="text-green-600 font-semibold"
+                >9837066698</a
+              >
+            </p>
+          </div>
+        </div>
+
+        <!-- FORM -->
+        <div
+          class="bg-white rounded-2xl shadow-xl p-8 fade-up premium-card relative overflow-hidden"
+        >
+          <div
+            class="absolute -top-10 -right-10 w-40 h-40 bg-orange-300 opacity-20 rounded-full blur-3xl"
+          ></div>
+
+          <h3 class="text-2xl font-bold mb-6 text-secondary">
+            📝 Apply for Area Distributorship
+          </h3>
+
+          <form id="enquiryForm" class="space-y-4">
+            <input
+              id="name"
+              type="text"
+              placeholder="Full Name"
+              class="w-full border rounded px-4 py-3 focus:ring-2 focus:ring-primary"
+            />
+
+            <input
+              id="phone"
+              type="tel"
+              placeholder="Phone Number"
+              class="w-full border rounded px-4 py-3 focus:ring-2 focus:ring-primary"
+            />
+
+            <input
+              id="city"
+              type="text"
+              placeholder="City"
+              class="w-full border rounded px-4 py-3 focus:ring-2 focus:ring-primary"
+            />
+
+            <input
+              id="area"
+              type="text"
+              placeholder="Interested Territory / Area"
+              class="w-full border rounded px-4 py-3 focus:ring-2 focus:ring-primary"
+            />
+
+            <button
+              type="submit"
+              class="w-full bg-gradient-to-r from-primary to-secondary text-white py-3 rounded font-semibold hover:scale-105 transition duration-300 shadow-lg"
+            >
+              Submit Enquiry
+            </button>
+          </form>
+        </div>
+      </div>
+    </section>
+    <!-- ===== strong cta strip===== -->
+     <section class="py-16 bg-gradient-to-r from-primary to-secondary text-white text-center">
+  <h2 class="text-4xl font-extrabold mb-4">
+    Ready to Travel or Build a Travel Business?
+  </h2>
+  <p class="max-w-2xl mx-auto mb-6">
+    Book your next holiday or apply for Area Distributorship with SBNL Holidays today.
+  </p>
+
+  <div class="flex flex-col md:flex-row justify-center gap-4">
+    <a href="investment.html"
+       class="px-8 py-3 bg-white text-primary font-bold rounded-lg shadow hover:scale-105 transition">
+      View Travel Packages
+    </a>
+    <a href="#enquiryForm"
+       class="px-8 py-3 border border-white font-bold rounded-lg hover:bg-white hover:text-primary transition">
+      Apply Now
+    </a>
+  </div>
+</section>
+<!-- ===== Google map ===== -->
+ <!-- ===== OFFICE LOCATION ===== -->
+<section class="py-20 bg-white">
+  <div class="max-w-7xl mx-auto px-6">
+
+    <!-- Heading -->
+    <div class="text-center mb-12">
+      <h2 class="text-4xl font-extrabold text-dark mb-4">
+        📍 Visit Our Office
+      </h2>
+      <p class="text-gray-600 max-w-3xl mx-auto">
+        Feel free to visit our office for personalized travel consultation
+        or business discussion with our team.
+      </p>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+
+      <!-- Office Details -->
+      <div class="space-y-6">
+        <div class="flex items-start gap-4">
+          <i class="fas fa-map-marker-alt text-2xl text-primary mt-1"></i>
+          <p class="text-gray-700 text-lg">
+            <b>SBNL Holidays Pvt. Ltd.</b><br />
+            402, Raman Tower, Fourth Floor,<br />
+            Sanjay Palace, Agra – 282002,<br />
+            Uttar Pradesh, India
+          </p>
+        </div>
+
+        <div class="flex items-center gap-4">
+          <i class="fas fa-phone-alt text-xl text-primary"></i>
+          <p class="text-gray-700 text-lg">
+            <b>Call:</b> +91 98370 66698
+          </p>
+        </div>
+
+        <div class="flex items-center gap-4">
+          <i class="fas fa-envelope text-xl text-primary"></i>
+          <p class="text-gray-700 text-lg">
+            <b>Email:</b> sbnlworldholidays2@gmail.com
+          </p>
+        </div>
+
+        <div class="flex items-center gap-4">
+          <i class="fas fa-clock text-xl text-primary"></i>
+          <p class="text-gray-700 text-lg">
+            <b>Working Hours:</b> Mon – Sat (9:00 AM – 8:00 PM)
+          </p>
+        </div>
+
+        <!-- CTA Buttons -->
+        <div class="flex gap-4 pt-4">
+          <a
+            href="https://www.google.com/maps/search/?api=1&query=402+Raman+Tower+Sanjay+Palace+Agra"
+            target="_blank"
+            class="px-6 py-3 bg-primary text-white font-semibold rounded-lg shadow hover:bg-secondary transition"
+          >
+            Get Directions
+          </a>
+
+          <a
+            href="tel:+919837066698"
+            class="px-6 py-3 border border-primary text-primary font-semibold rounded-lg hover:bg-orange-50 transition"
+          >
+            Call Office
+          </a>
+        </div>
+      </div>
+
+      <!-- Google Map -->
+      <div class="rounded-2xl overflow-hidden shadow-xl">
+        <iframe
+          src="https://www.google.com/maps?q=402%20Raman%20Tower%20Sanjay%20Palace%20Agra&output=embed"
+          width="100%"
+          height="400"
+          style="border:0;"
+          allowfullscreen=""
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade"
+        ></iframe>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+    <!-- FOOTER -->
+    <footer class="bg-dark text-gray-300 py-8 text-center">
+      © 2026 SBNL Holidays Pvt. Ltd.
+    </footer>
+
+    <!-- ANIMATIONS -->
+    <script>
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) entry.target.classList.add("show");
+        });
+      });
+      document
+        .querySelectorAll(".fade-up")
+        .forEach((el) => observer.observe(el));
+    </script>
+
+    <!-- WHATSAPP FORM -->
+    <script>
+      document
+        .getElementById("enquiryForm")
+        .addEventListener("submit", function (e) {
+          e.preventDefault();
+          const name = name.value,
+            phone = phone.value,
+            city = city.value,
+            area = area.value;
+          const message = `New Area Distributor Enquiry:%0AName: ${name}%0APhone: ${phone}%0ACity: ${city}%0AInterested Area: ${area}`;
+          window.open(`https://wa.me/919837066698?text=${message}`, "_blank");
+        });
+    </script>
+    <!-- LOAD HEADER -->
+    <script>
+      fetch("header.html")
+        .then((res) => res.text())
+        .then((data) => {
+          document.getElementById("header").innerHTML = data;
+
+          // Re-attach mobile menu toggle after loading
+          const mobileMenuButton = document.getElementById("mobileMenuButton");
+          const mobileMenu = document.getElementById("mobileMenu");
+
+          if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener("click", () => {
+              mobileMenu.classList.toggle("hidden");
+            });
+          }
+        });
+    </script>
+  </body>
+</html>

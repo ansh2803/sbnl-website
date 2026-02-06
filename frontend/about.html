@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About SBNL Holidays</title>
+    <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+
+    <!-- Tailwind -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#F97316", // ORANGE (main)
+              secondary: "#EA580C", // DARK ORANGE
+              accent: "#1D4ED8", // BLUE (small highlights only)
+              dark: "#1F2937",
+              light: "#FFFFFF",
+            },
+
+            fontFamily: {
+              sans: ["Poppins", "system-ui", "-apple-system"],
+              serif: ["Playfair Display", "Georgia", "serif"],
+            },
+            animation: {
+              "fade-in": "fadeIn 0.5s ease-in-out",
+              "slide-up": "slideUp 0.3s ease-out",
+            },
+            keyframes: {
+              fadeIn: {
+                "0%": { opacity: "0" },
+                "100%": { opacity: "1" },
+              },
+              slideUp: {
+                "0%": { transform: "translateY(10px)", opacity: "0" },
+                "100%": { transform: "translateY(0)", opacity: "1" },
+              },
+            },
+          },
+        },
+      };
+    </script>
+
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+      }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5,
+      h6 {
+        font-family: "Playfair Display", serif;
+      }
+
+      .fade-up {
+        opacity: 0;
+        transform: translateY(40px);
+        transition: all 0.9s ease;
+      }
+      .fade-up.show {
+        opacity: 1;
+        transform: translateY(0);
+      }
+
+      /* Custom Gradient Text */
+      .heading-brand {
+        background: linear-gradient(90deg, #ffffff, #fed7aa, #ffffff);
+        background-clip: text;
+        -webkit-background-clip: text;
+        color: transparent;
+      }
+    </style>
+  </head>
+
+  <body class="bg-white text-dark">
+    <!-- ===== NAVBAR ===== -->
+    <div id="header"></div>
+    <!-- ===== HERO ===== -->
+    <section
+      class="py-20 bg-gradient-to-br from-primary to-secondary text-white relative overflow-hidden"
+    >
+      <!-- Animated Background Blobs -->
+      <div
+        class="absolute w-72 h-72 bg-orange-300 opacity-20 rounded-full blur-3xl top-[-60px] left-[-40px] animate-pulse"
+      ></div>
+      <div
+        class="absolute w-80 h-80 bg-orange-300 opacity-20 rounded-full blur-3xl bottom-[-80px] right-[-60px] animate-pulse"
+      ></div>
+
+      <div class="max-w-5xl mx-auto px-6 text-center fade-up relative z-10">
+        <h1 class="text-4xl md:text-5xl font-extrabold heading-brand">
+          🏢 About SBNL Holidays Pvt. Ltd.
+        </h1>
+
+        <p class="mt-6 text-lg opacity-90">
+          Building trusted travel experiences and
+          <span class="text-gold font-semibold">business opportunities</span>
+          across India
+        </p>
+      </div>
+    </section>
+    <!--ABOUT PLAN SECTION-->
+
+    <!-- ===== ABOUT CONTENT ===== -->
+    <section class="py-16">
+      <div
+        class="max-w-7xl mx-auto px-6 grid md:grid-cols-2 gap-12 items-center"
+      >
+        <!-- Text -->
+        <div class="fade-up">
+          <h2 class="text-3xl font-bold mb-4">Who We Are</h2>
+          <p class="text-gray-600 mb-4">
+            <b>SBNL Holidays Pvt. Ltd.</b> is a fast-growing travel company,
+            operating successfully for the last <b>3+ years</b> from
+            <b>Agra, Uttar Pradesh</b>.
+          </p>
+          <p class="text-gray-600 mb-4">
+            We specialize in <b>National & International Tour Packages</b>,
+            delivering well-planned travel experiences with professional
+            support.
+          </p>
+          <p class="text-gray-600">
+            With a strong foundation, we are now expanding our presence across
+            India through a structured B2B business model.
+          </p>
+        </div>
+
+        <!-- Image -->
+        <div class="fade-up">
+          <img
+            src="https://images.unsplash.com/photo-1526778548025-fa2f459cd5c1?auto=format&fit=crop&w=900&q=80"
+            alt="Travel Business"
+            class="rounded-2xl shadow-xl"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== GGPK SECTION ===== -->
+    <section class="py-16 bg-white">
+      <div class="max-w-6xl mx-auto px-6 text-center fade-up">
+        <h2 class="text-3xl font-bold mb-4 text-primary">
+          🌍 Ghumo Ghumao Paise Kamao (GGPK)
+        </h2>
+        <p class="text-gray-600 max-w-3xl mx-auto">
+          GGPK is a unique travel-based business concept that combines travel
+          experiences with income opportunities. It is designed for individuals
+          looking to partner with a professionally managed company while
+          building long-term value.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===== OPTIONAL VIDEO SECTION ===== -->
+    <section class="py-16 bg-orange-50">
+      <div class="max-w-6xl mx-auto px-6 text-center fade-up">
+        <h2 class="text-3xl font-bold mb-6">
+          🎥 Experience the World with SBNL
+        </h2>
+
+        <!-- Replace iframe src when official video is available -->
+        <div
+          class="aspect-w-16 aspect-h-9 max-w-4xl mx-auto rounded-2xl overflow-hidden shadow-xl"
+        >
+          <iframe
+            src="https://www.youtube.com/embed/Scxs7L0vhZ4"
+            title="Travel Experience"
+            frameborder="0"
+            allowfullscreen
+            class="w-full h-96"
+          >
+          </iframe>
+        </div>
+
+        <p class="text-sm text-gray-500 mt-4">
+          *Video for representation purposes. Official company video can be
+          added.
+        </p>
+      </div>
+    </section>
+
+    <!-- ===== FOOTER ===== -->
+    <footer class="bg-dark text-gray-300 py-8 text-center">
+      <p>© 2026 SBNL Holidays Pvt. Ltd. All Rights Reserved.</p>
+    </footer>
+
+    <!-- ===== ANIMATION SCRIPT ===== -->
+    <script>
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+          }
+        });
+      });
+
+      document
+        .querySelectorAll(".fade-up")
+        .forEach((el) => observer.observe(el));
+    </script>
+    <script>
+      fetch("header.html")
+        .then((res) => res.text())
+        .then((data) => {
+          document.getElementById("header").innerHTML = data;
+
+          // Re-attach mobile menu toggle after loading
+          const mobileMenuButton = document.getElementById("mobileMenuButton");
+          const mobileMenu = document.getElementById("mobileMenu");
+
+          if (mobileMenuButton && mobileMenu) {
+            mobileMenuButton.addEventListener("click", () => {
+              mobileMenu.classList.toggle("hidden");
+            });
+          }
+        });
+    </script>
+  </body>
+</html>

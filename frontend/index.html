@@ -1,0 +1,1431 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <base target="_self" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SBNL Holidays Pvt. Ltd. - Your Trusted Travel Partner</title>
+    <meta
+      name="description"
+      content="SBNL Holidays Pvt. Ltd. offers premium travel packages, international tours, and customized holiday experiences worldwide."
+    />
+    <meta
+      name="keywords"
+      content="travel, holidays, tours, international travel, vacation packages"
+    />
+     <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#F97316",
+              secondary: "#EA580C",
+              accent: "#1D4ED8",
+              dark: "#1F2937",
+              light: "#FFFFFF",
+            },
+            fontFamily: {
+              sans: ["Poppins", "system-ui", "-apple-system"],
+              serif: ["Playfair Display", "Georgia", "serif"],
+            },
+            animation: {
+              "fade-in": "fadeIn 0.5s ease-in-out",
+              "slide-up": "slideUp 0.3s ease-out",
+            },
+            keyframes: {
+              fadeIn: {
+                "0%": { opacity: "0" },
+                "100%": { opacity: "1" },
+              },
+              slideUp: {
+                "0%": { transform: "translateY(10px)", opacity: "0" },
+                "100%": { transform: "translateY(0)", opacity: "1" },
+              },
+            },
+          },
+        },
+      };
+    </script>
+    <style>
+      body {
+        font-family: "Poppins", sans-serif;
+      }
+      .hero-gradient {
+        background: linear-gradient(
+          135deg,
+          rgba(249, 115, 22, 0.95) 0%,
+          rgba(234, 88, 12, 0.95) 100%
+        );
+      }
+      .card-hover {
+        transition: all 0.3s ease;
+      }
+      .card-hover:hover {
+        transform: translateY(-5px);
+        box-shadow:
+          0 20px 25px -5px rgba(0, 0, 0, 0.1),
+          0 10px 10px -5px rgba(0, 0, 0, 0.04);
+      }
+      .nav-link {
+        position: relative;
+      }
+      .nav-link::after {
+        content: "";
+        position: absolute;
+        width: 0;
+        height: 2px;
+        bottom: -2px;
+        left: 0;
+        background-color: #F97316;
+        transition: width 0.3s ease;
+      }
+      .nav-link:hover::after {
+        width: 100%;
+      }
+    </style>
+    
+    <style>
+      /* ===== SCROLL REVEAL SYSTEM ===== */
+      .body {
+        font-family: "Poppins", sans-serif;
+      }
+      .reveal {
+        opacity: 0;
+        transform: translateY(60px) scale(0.95);
+        transition: all 1s cubic-bezier(0.17, 0.67, 0.83, 0.67);
+      }
+      .reveal.active {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+      }
+
+      /* LEFT / RIGHT */
+      .reveal-left {
+        transform: translateX(-80px);
+      }
+      .reveal-right {
+        transform: translateX(80px);
+      }
+
+      /* FLOATING ANIMATION */
+      .float {
+        animation: float 6s ease-in-out infinite;
+      }
+      @keyframes float {
+        0%,
+        100% {
+          transform: translateY(0px);
+        }
+        50% {
+          transform: translateY(-15px);
+        }
+      }
+
+      /* HERO PARALLAX */
+      .parallax {
+        transform: translateZ(0);
+        will-change: transform;
+      }
+
+      /* GLOW HOVER */
+      .glow:hover {
+        box-shadow: 0 0 25px rgba(249, 115, 22, 0.4);
+        transform: scale(1.05);
+        transition: 0.4s ease;
+      }
+    </style>
+    <style>
+       body {
+        font-family: "Poppins", sans-serif;
+      }
+      .luxury-glow {
+        background: linear-gradient(90deg, #ffffff, #F97316, #ffffff);
+
+        /* Standard (future support) */
+        background-clip: text;
+
+        /* Chrome, Edge, Safari */
+        -webkit-background-clip: text;
+
+        /* Makes text transparent so gradient shows */
+        color: transparent;
+        -webkit-text-fill-color: transparent;
+
+        text-shadow:
+          0 0 8px rgba(249, 115, 22, 0.35),
+          0 0 16px rgba(249, 115, 22, 0.25),
+          0 0 30px rgba(249, 115, 22, 0.2);
+
+        animation: glowPulse 3s ease-in-out infinite alternate;
+      }
+
+      @keyframes glowPulse {
+        from {
+          text-shadow:
+            0 0 6px rgba(249, 115, 22, 0.25),
+            0 0 12px rgba(249, 115, 22, 0.2);
+        }
+        to {
+          text-shadow:
+            0 0 14px rgba(249, 115, 22, 0.45),
+            0 0 28px rgba(249, 115, 22, 0.35),
+            0 0 40px rgba(249, 115, 22, 0.25);
+        }
+      }
+      .hero-glass {
+        backdrop-filter: blur(6px);
+        background: rgba(0, 0, 0, 0.25);
+        padding: 10px 20px;
+        border-radius: 12px;
+      }
+
+      .reveal {
+  opacity: 0;
+  transform: translateY(60px) scale(0.95);
+}
+      .reveal.active {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+    </style>
+    <style>
+       body {
+        font-family: "Poppins", sans-serif;
+      }
+@keyframes logoIntro {
+  0% { opacity: 0; transform: translateY(-20px) scale(0.9); }
+  100% { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+.logo-animate {
+  animation: logoIntro 0.9s ease-out forwards;
+}
+.logo-animate img {
+  filter: drop-shadow(0 0 10px rgba(249,115,22,0.5));
+}
+
+</style>
+<style>
+   body {
+        font-family: "Poppins", sans-serif;
+      }
+  @keyframes float {
+  0% { transform: translateY(0) translateX(0); }
+  50% { transform: translateY(-15px) translateX(10px); }
+  100% { transform: translateY(0) translateX(0); }
+}
+
+.icon-float {
+  animation: float 5s ease-in-out infinite;
+}
+
+.icon-float-delayed {
+  animation: float 6s ease-in-out infinite;
+  animation-delay: 1s;
+}
+
+.icon-float-slow {
+  animation: float 8s ease-in-out infinite;
+}
+
+</style>
+<style>
+   body {
+        font-family: "Poppins", sans-serif;
+      }
+  .luxury-glow {
+  color: #ffffff;
+  text-shadow:
+    0 0 1px #ffffff,
+    0 0 2px #ffffff,
+    0 0 3px #ffffff;
+  animation: sharpGlow 2s ease-in-out infinite alternate;
+}
+
+@keyframes sharpGlow {
+  from {
+    text-shadow:
+      0 0 1px #ffffff,
+      0 0 2px #ffffff,
+      0 0 3px #ffffff;
+  }
+  to {
+    text-shadow:
+      0 0 2px #ffffff,
+      0 0 4px #ffffff,
+      0 0 6px #ffffff;
+  }
+}
+
+</style>
+
+  </head>
+  <body class="font-sans text-gray-800 bg-light">
+    <!-- Top Bar -->
+    <div class="bg-dark text-white py-2 px-4">
+      <div
+        class="container mx-auto flex flex-col md:flex-row justify-between items-center"
+      >
+        <div class="flex items-center space-x-4 mb-2 md:mb-0">
+          <!-- <div class="flex items-center"> -->
+            <!-- <i class="fas fa-phone-alt text-accent mr-2"></i> -->
+            <!-- <span>+91 98370 66698</span> -->
+          <!-- </div> -->
+          <div class="flex items-center">
+            <i class="fas fa-envelope text-accent mr-2"></i>
+            <span>sbnlworldholidays2@gmail.com</span>
+          </div>
+        </div>
+        <div class="flex items-center space-x-4">
+          <a href="admin-login.html" class="hover:text-accent transition-colors">Admin Login</a>
+          <!-- <a href="#" class="hover:text-accent transition-colors">Register</a> -->
+          <div class="flex items-center space-x-2">
+            <i class="fas fa-globe"></i>
+            <!-- <select class="bg-transparent border-none focus:outline-none">
+              <option value="en">EN</option>
+              <option value="hi">HI</option>
+            </select> -->
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation -->
+<div id="header"></div>
+
+
+    <!-- Hero Section -->
+    <section class="relative">
+      <div class="hero-gradient text-white">
+        <div class="container mx-auto px-4 py-16 md:py-24">
+          <div class="max-w-3xl mx-auto text-center">
+            <div class="hero-glass inline-block">
+             <h1
+  class="text-4xl md:text-5xl lg:text-6xl font-serif font-bold mb-6 animate-fade-in reveal luxury-glow"
+>
+  Discover Your Perfect Holiday
+</h1>
+
+            </div>
+
+            <p class="text-xl mb-8 opacity-90 reveal">
+              Experience the world with SBNL Holidays Pvt. Ltd. - "Ghumo Ghumao Paisa
+              Kamao"
+            </p>
+          <div class="text-center flex flex-col items-center">
+
+  <h2 class="flex items-center justify-center gap-4 text-3xl md:text-4xl font-extrabold leading-tight mb-4">
+
+    <!-- Airplane Icon -->
+    <svg class="w-10 h-10 md:w-12 md:h-12 text-white icon-float-delayed flex-shrink-0"
+         viewBox="0 0 24 24" fill="currentColor">
+      <path d="M21 16v-2l-8-5V3.5a1.5 1.5 0 00-3 0V9L2 14v2l8-2.5V20l-2 1v1l3-1 3 1v-1l-2-1v-6.5L21 16z"/>
+    </svg>
+
+    <!-- Text -->
+    <span class="text-center">
+      Get <span class="text-white">2 International Trips</span><br>
+      at just <span class="text-white">₹1,20,000</span>
+    </span>
+
+  </h2>
+  <a href="investment.html"
+   class="mt-4 inline-block px-8 py-3 bg-primary text-white font-bold rounded-full shadow-lg hover:bg-secondary transition duration-300">
+   Know More About This Offer →
+</a>
+
+</div>
+
+
+            <!--unique card-->
+            
+             
+
+            <!-- Search Form -->
+            <!-- <div
+              class="bg-white rounded-xl p-6 shadow-2xl animate-slide-up reveal"
+            >
+              <div class="grid grid-cols-1 md:grid-cols-3 gap-4">
+                <div>
+                  <label class="block text-sm font-medium text-gray-700 mb-2"
+                    >Destination</label
+                  >
+                  <div class="relative">
+                    <i
+                      class="fas fa-map-marker-alt absolute left-3 top-3 text-gray-400"
+                    ></i>
+                    <input
+                      id="searchLocation"
+                      type="text"
+                      placeholder="Where do you want to go?"
+                      class="w-full pl-10 pr-3 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                    />
+                  </div>
+                </div>
+                <div>
+                  <label class="block text-sm font-medium text-gray-700 mb-2"
+                    >Travel Date</label
+                  >
+                  <div class="relative">
+                    <i
+                      class="fas fa-calendar-alt absolute left-3 top-3 text-gray-400"
+                    ></i>
+                    <input
+                      type="text"
+                      placeholder="Select Dates"
+                      class="w-full pl-10 pr-3 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                    />
+                  </div>
+                </div>
+                <div>
+                  <label class="block text-sm font-medium text-gray-700 mb-2"
+                    >Travel Type</label
+                  >
+                  <div class="relative">
+                    <i
+                      class="fas fa-users absolute left-3 top-3 text-gray-400"
+                    ></i>
+                    <select
+                      class="w-full pl-10 pr-3 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-primary focus:border-transparent"
+                    >
+                      <option value="">Select Type</option>
+                      <option value="family">Family Holiday</option>
+                      <option value="honeymoon">Honeymoon</option>
+                      <option value="adventure">Adventure</option>
+                      <option value="luxury">Luxury</option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+              <button
+                class="mt-6 w-full md:w-auto px-8 py-3 bg-primary text-white rounded-lg hover:bg-secondary transition-colors font-medium"
+              >
+                <i class="fas fa-search mr-2"></i>Search Packages
+              </button>  
+            </div> -->
+          </div>
+        </div>
+      </div>
+
+      <!-- Hero Background Image -->
+      <div class="absolute inset-0 -z-10">
+        <img
+          src="https://picsum.photos/1920/800?random=1"
+          alt="Beautiful travel destination"
+          class="w-full h-full object-cover parallax"
+          loading="lazy"
+        />
+      </div>
+    </section>
+
+    <!-- Featured Destinations -->
+    <section class="py-16 bg-white">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-serif font-bold text-dark mb-4">
+            Featured Destinations
+          </h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">
+            Explore our most popular destinations handpicked by travel experts
+          </p>
+        </div>
+
+      
+          <div
+            id="packageContainer"
+            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
+          ></div>
+
+          <!-- Destination 1 -->
+          <!-- <div
+            class="card-hover bg-white rounded-xl overflow-hidden shadow-lg reveal reveal-left glow"
+          >
+            <div class="relative h-48">
+              <img
+                src="assets/images/dubai.jpg.jpg"
+                alt="Dubai skyline with modern architecture"
+                class="w-full h-full object-cover"
+                loading="lazy"
+              />
+              <div class="absolute top-4 right-4">
+                <span
+                  class="bg-primary text-white px-3 py-1 rounded-full text-sm font-medium"
+                  >Popular</span
+                >
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-dark mb-2">Dubai</h3>
+              <p class="text-gray-600 mb-4">
+                Luxury skyline & desert experiences
+              </p>
+              <div class="flex justify-between items-center">
+                <span class="text-primary font-bold">From ₹59,999</span>
+                <a
+                  href="pages/dubai.html"
+                  class="text-secondary hover:text-primary font-medium"
+                  >Explore →</a
+                >
+              </div>
+            </div>
+          </div> -->
+
+          <!-- Destination 2 -->
+          <!-- <div
+            class="card-hover bg-white rounded-xl overflow-hidden shadow-lg reveal reveal-left glow"
+          >
+            <div class="relative h-48">
+              <img
+                src="assets/images/bangkok.jpg.jpg"
+                alt="Bali tropical beach with palm trees"
+                class="w-full h-full object-cover"
+                loading="lazy"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-dark mb-2">Bangkok</h3>
+              <p class="text-gray-600 mb-4">
+                Vibrant city with rich culture and nightlife
+              </p>
+              <div class="flex justify-between items-center">
+                <span class="text-primary font-bold">From ₹59,999</span>
+                <a
+                  href="pages/bangkok.html"
+                  class="text-secondary hover:text-primary font-medium"
+                  >Explore →</a
+                >
+              </div>
+            </div>
+          </div> -->
+
+          <!-- Destination 3 -->
+          <!-- <div
+            class="card-hover bg-white rounded-xl overflow-hidden shadow-lg reveal reveal-left glow"
+          >
+            <div class="relative h-48">
+              <img
+                src="assets/images/pattaya/pattaya.jpg"
+                alt="Dubai skyline with modern architecture"
+                class="w-full h-full object-cover"
+                loading="lazy"
+              />
+              <div class="absolute top-4 right-4">
+                <span
+                  class="bg-primary text-white px-3 py-1 rounded-full text-sm font-medium"
+                  >Luxury</span
+                >
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-dark mb-2">Pattaya</h3>
+              <p class="text-gray-600 mb-4">
+                Beach city known for vibrant nightlife and water sports
+              </p>
+              <div class="flex justify-between items-center">
+                <span class="text-primary font-bold">From ₹59,999</span>
+                <a
+                  href="pages/pattaya.html"
+                  class="text-secondary hover:text-primary font-medium"
+                  >Explore →</a
+                >
+              </div>
+            </div>
+          </div> -->
+        </div>
+
+        <div class="text-center mt-10">
+          <!-- <a
+            href="#"
+            class="inline-flex items-center text-primary font-medium hover:text-secondary"
+          >
+            View All Destinations
+            <i class="fas fa-arrow-right ml-2"></i>
+          </a> -->
+        </div>
+      </div>
+    </section>
+
+    <!-- Why Choose Us -->
+    <section class="py-16 bg-orange-50">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-serif font-bold text-dark mb-4">
+            Why Choose SBNL Holidays Pvt. Ltd.?
+          </h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">
+            We make your travel dreams come true with exceptional service
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div class="text-center p-6 reveal float">
+            <div
+              class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4"
+            >
+              <i class="fas fa-shield-alt text-white text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-dark mb-3">Trust & Safety</h3>
+            <p class="text-gray-600">
+              ISO certified with 15+ years of trusted travel experience
+            </p>
+          </div>
+
+          <div class="text-center p-6 reveal float">
+            <div
+              class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4"
+            >
+              <i class="fas fa-headset text-white text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-dark mb-3">24/7 Support</h3>
+            <p class="text-gray-600">
+              Round-the-clock assistance during your entire journey
+            </p>
+          </div>
+
+          <div class="text-center p-6 reveal float">
+            <div
+              class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4"
+            >
+              <i class="fas fa-award text-white text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-dark mb-3">
+              Best Price Guarantee
+            </h3>
+            <p class="text-gray-600">
+              We guarantee the best prices for all our packages
+            </p>
+          </div>
+
+          <div class="text-center p-6 reveal float">
+            <div
+              class="w-16 h-16 bg-primary rounded-full flex items-center justify-center mx-auto mb-4"
+            >
+              <i class="fas fa-user-check text-white text-2xl"></i>
+            </div>
+            <h3 class="text-xl font-bold text-dark mb-3">
+              Customized Itineraries
+            </h3>
+            <p class="text-gray-600">
+              Tailor-made holidays designed just for you
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- franchise model -->
+     <!-- AREA DISTRIBUTOR BUSINESS SECTION -->
+<section class="py-24 bg-black text-white relative overflow-hidden">
+
+  <!-- Soft Glow Background -->
+  <div class="absolute w-96 h-96 bg-primary opacity-20 rounded-full blur-3xl -top-20 -left-20"></div>
+  <div class="absolute w-96 h-96 bg-secondary opacity-20 rounded-full blur-3xl -bottom-20 -right-20"></div>
+
+  <div class="container mx-auto px-4 relative z-10">
+
+    <!-- Heading -->
+    <div class="text-center mb-16">
+      <h2 class="text-4xl md:text-5xl font-extrabold mb-4">
+        Area Distributor Investment Plan
+      </h2>
+      <p class="text-gray-300 max-w-2xl mx-auto">
+        Own a travel business under SBNL Holidays with guaranteed structure, exclusive territory, and long-term earning potential.
+      </p>
+    </div>
+
+    <!-- TOP INFO CARDS -->
+    <div class="grid md:grid-cols-3 gap-6 mb-10">
+
+      <div class="bg-gradient-to-br from-primary to-secondary rounded-xl p-6 shadow-lg">
+        <h3 class="text-lg font-semibold mb-2">Investment</h3>
+        <p class="text-2xl font-bold">₹10,00,000</p>
+        <span class="text-sm opacity-80">(Security Deposit)</span>
+      </div>
+
+      <div class="bg-gradient-to-br from-primary to-secondary rounded-xl p-6 shadow-lg">
+        <h3 class="text-lg font-semibold mb-2">Tenure</h3>
+        <p class="text-2xl font-bold">1 Year</p>
+        <span class="text-sm opacity-80">Renewable Basis</span>
+      </div>
+
+      <div class="bg-gradient-to-br from-primary to-secondary rounded-xl p-6 shadow-lg">
+        <h3 class="text-lg font-semibold mb-2">Guaranteed ROI</h3>
+        <p class="text-2xl font-bold">15% per annum*</p>
+      </div>
+
+    </div>
+
+    <!-- SECOND ROW -->
+    <div class="grid md:grid-cols-2 gap-6 mb-20">
+
+      <div class="bg-gradient-to-br from-primary to-secondary rounded-xl p-6 shadow-lg">
+        <h3 class="text-lg font-semibold mb-2">Franchise Fees</h3>
+        <p class="text-2xl font-bold">₹3,00,000</p>
+      </div>
+
+      <div class="bg-gradient-to-br from-primary to-secondary rounded-xl p-6 shadow-lg">
+        <h3 class="text-lg font-semibold mb-2">Territory</h3>
+        <p class="text-xl font-bold">Exclusive Pin Code Area Allotment</p>
+      </div>
+
+    </div>
+
+    <!-- SALES & EARNINGS STRUCTURE -->
+    <div class="grid md:grid-cols-2 gap-12 items-center">
+
+      <!-- LEFT CONTENT -->
+      <div>
+        <h3 class="text-3xl font-bold mb-8">Sales & Earnings Structure</h3>
+
+        <div class="space-y-6">
+
+          <div class="border-l-4 border-primary pl-4">
+            <h4 class="text-xl font-semibold">01 — Package Allocation</h4>
+            <p class="text-gray-300">
+              100 tour packages allotted for sales to each Area Distributor.
+            </p>
+          </div>
+
+          <div class="border-l-4 border-primary pl-4">
+            <h4 class="text-xl font-semibold">02 — Per Sale Adjustment</h4>
+            <p class="text-gray-300">
+              ₹10,000 adjustable from deposited amount (up to 100 sales).
+            </p>
+          </div>
+
+          <div class="border-l-4 border-primary pl-4">
+            <h4 class="text-xl font-semibold">03 — Commission Earned</h4>
+            <p class="text-gray-300">
+              5% commission on every successful tour package sale.
+            </p>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- RIGHT IMAGE -->
+      <div class="rounded-2xl overflow-hidden shadow-2xl">
+        <img src="assets/images/busn-model.jpg" alt="Business growth model" class="w-full h-full object-cover">
+      </div>
+
+    </div>
+
+    <!-- CTA BUTTON -->
+    <div class="text-center mt-16">
+      <a href="foco.html"
+         class="inline-block px-12 py-4 bg-primary hover:bg-secondary text-white text-lg font-bold rounded-full shadow-lg transition">
+        Explore FOCO Business Model →
+      </a>
+    </div>
+
+  </div>
+</section>
+
+ 
+    <!-- Testimonials -->
+    <section class="py-16 bg-orange-50">
+      <div class="container mx-auto px-4">
+        <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-serif font-bold text-dark mb-4">
+            What Our Travelers Say
+          </h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">
+            Join thousands of satisfied customers who traveled with us
+          </p>
+        </div>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          <div class="bg-white p-6 rounded-xl shadow-lg reveal">
+            <div class="flex items-center mb-4">
+              <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                <img
+                  src="https://picsum.photos/100?random=9"
+                  alt="Customer photo"
+                  class="w-full h-full object-cover"
+                  loading="lazy"
+                />
+              </div>
+              <div>
+                <h4 class="font-bold text-dark">Rajesh Kumar</h4>
+                <div class="flex text-accent">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+            </div>
+            <p class="text-gray-600 italic">
+              "Our Swiss trip was perfectly organized. Every detail was taken
+              care of, and the hotels were excellent. Highly recommended!"
+            </p>
+          </div>
+
+          <div class="bg-white p-6 rounded-xl shadow-lg reveal reveal-left">
+            <div class="flex items-center mb-4">
+              <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                <img
+                  src="https://picsum.photos/100?random=10"
+                  alt="Customer photo"
+                  class="w-full h-full object-cover"
+                  loading="lazy"
+                />
+              </div>
+              <div>
+                <h4 class="font-bold text-dark">Priya Sharma</h4>
+                <div class="flex text-accent">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star-half-alt"></i>
+                </div>
+              </div>
+            </div>
+            <p class="text-gray-600 italic">
+              "the pattaya trip was a dream come true! The beaches were
+              stunning, and the activities were so much fun. Can't wait to book
+              my next trip with SBNL Holidays Pvt. Ltd."
+            </p>
+          </div>
+
+          <div class="bg-white p-6 rounded-xl shadow-lg reveal reveal-right">
+            <div class="flex items-center mb-4">
+              <div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+                <img
+                  src="https://picsum.photos/100?random=11"
+                  alt="Customer photo"
+                  class="w-full h-full object-cover"
+                  loading="lazy"
+                />
+              </div>
+              <div>
+                <h4 class="font-bold text-dark">Amit Patel</h4>
+                <div class="flex text-accent">
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                  <i class="fas fa-star"></i>
+                </div>
+              </div>
+            </div>
+            <p class="text-gray-600 italic">
+              "Dubai luxury tour was worth every penny. The desert safari and
+              Burj Khalifa experience were unforgettable!"
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Newsletter -->
+    <section class="py-16 bg-primary text-white reveal">
+      <div class="container mx-auto px-4">
+        <div class="max-w-3xl mx-auto text-center">
+          <h2 class="text-3xl md:text-4xl font-serif font-bold mb-4">
+            Stay Updated with Travel Deals
+          </h2>
+          <p class="mb-8 opacity-90">
+            Subscribe to our newsletter and get exclusive offers delivered to
+            your inbox
+          </p>
+
+          <form class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
+            <input
+              type="email"
+              placeholder="Enter your email address"
+              class="flex-grow px-4 py-3 rounded-lg text-gray-800 focus:outline-none focus:ring-2 focus:ring-accent"
+              required
+            />
+            <button
+              type="submit"
+              class="px-6 py-3 bg-white text-primary rounded-lg hover:bg-orange-100 transition-colors font-medium"
+            >
+              Subscribe Now
+            </button>
+          </form>
+          <p class="text-sm opacity-75 mt-4">
+            We respect your privacy. Unsubscribe at any time.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white">
+      <div class="container mx-auto px-4 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+          <!-- Company Info -->
+          <div>
+            <div class="text-2xl font-bold mb-4">
+              <span class="text-primary">SBNL</span> Holidays Pvt. Ltd.
+            </div>
+            <p class="text-gray-400 mb-4">"Ghumo Ghumao Paisa Kamao"</p>
+            <div class="flex space-x-4">
+              <a href="#" class="text-gray-400 hover:text-primary">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+              <a href="#" class="text-gray-400 hover:text-primary">
+                <i class="fab fa-twitter"></i>
+              </a>
+              <a href="#" class="text-gray-400 hover:text-primary">
+                <i class="fab fa-instagram"></i>
+              </a>
+              <a href="#" class="text-gray-400 hover:text-primary">
+                <i class="fab fa-linkedin-in"></i>
+              </a>
+            </div>
+          </div>
+
+          <!-- Quick Links -->
+          <div>
+            <h3 class="text-lg font-bold mb-4">Quick Links</h3>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="index.html"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Home</a
+                >
+              </li>
+              <li>
+                <a
+                  href="about.html"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >About
+                </a>
+              </li>
+              <li>
+                <a
+                  href="foco.html"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >FOCO Model</a
+                >
+              </li>
+              <li>
+                <a
+                  href="investment.html"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Package Offer</a
+                >
+              </li>
+              <li>
+                <a
+                  href="contact.html"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Popular Destinations -->
+          <div>
+            <h3 class="text-lg font-bold mb-4">Popular Destinations</h3>
+            <ul class="space-y-2">
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Dubai</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Bangkok</a
+                >
+              </li>
+              <li>
+                <a
+                  href="#"
+                  class="text-gray-400 hover:text-white transition-colors"
+                  >Pattaya</a
+                >
+              </li>
+            </ul>
+          </div>
+
+          <!-- Contact Info -->
+          <div>
+            <h3 class="text-lg font-bold mb-4">Contact Us</h3>
+            <ul class="space-y-3">
+              <li class="flex items-start">
+                <i class="fas fa-map-marker-alt text-accent mr-3 mt-1"></i>
+                <span class="text-gray-400"
+                  >402, Raman Tower, Fourth Floor Sanjay Palace, Agra
+                  282002</span
+                >
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-phone-alt text-accent mr-3"></i>
+                <span class="text-gray-400">+91 98370 66698</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-envelope text-accent mr-3"></i>
+                <span class="text-gray-400">sbnlworldholidays2@gmail.com</span>
+              </li>
+              <li class="flex items-center">
+                <i class="fas fa-clock text-accent mr-3"></i>
+                <span class="text-gray-400">Mon - Sat: 9:00 AM - 8:00 PM</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div
+          class="border-t border-gray-800 mt-8 pt-8 text-center text-gray-400"
+        >
+          <p>
+            &copy; 2024 SBNL Holidays Pvt. Ltd. All rights reserved. |
+            <a href="#" class="hover:text-white">Privacy Policy</a> |
+            <a href="#" class="hover:text-white">Terms & Conditions</a>
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Cookie Consent -->
+    <div
+      class="fixed bottom-0 left-0 right-0 bg-dark text-white p-4 shadow-lg z-50"
+      id="cookieConsent"
+    >
+      <div class="container mx-auto">
+        <div class="flex flex-col md:flex-row items-center justify-between">
+          <div class="mb-4 md:mb-0 md:mr-4">
+            <p class="text-sm">
+              We use cookies to enhance your browsing experience. By continuing
+              to use our site, you consent to our use of cookies.
+            </p>
+          </div>
+          <div class="flex space-x-4">
+            <button
+              onclick="acceptCookies()"
+              class="px-4 py-2 bg-primary text-white rounded-lg hover:bg-secondary transition-colors text-sm"
+            >
+              Accept All
+            </button>
+            <button
+              onclick="declineCookies()"
+              class="px-4 py-2 bg-gray-700 text-white rounded-lg hover:bg-gray-600 transition-colors text-sm"
+            >
+              Decline
+            </button>
+            <a
+              href="#"
+              class="px-4 py-2 text-gray-400 hover:text-white text-sm"
+            >
+              Learn More
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      // Define data at the beginning
+      const destinations = [
+        {
+          id: 1,
+          name: "Swiss Alps",
+          description:
+            "Experience breathtaking mountain views and alpine adventures",
+          price: "₹85,999",
+          image: "https://picsum.photos/400/300?random=2",
+          tag: "Popular",
+        },
+        {
+          id: 2,
+          name: "Bali, Indonesia",
+          description:
+            "Tropical paradise with beautiful beaches and rich culture",
+          price: "₹45,999",
+          image: "https://picsum.photos/400/300?random=3",
+        },
+        {
+          id: 3,
+          name: "Dubai, UAE",
+          description:
+            "Modern marvel with luxury shopping and desert adventures",
+          price: "₹65,999",
+          image: "https://picsum.photos/400/300?random=4",
+          tag: "Luxury",
+        },
+        {
+          id: 4,
+          name: "Paris, France",
+          description: "Romantic city of lights with iconic landmarks",
+          price: "₹92,999",
+          image: "https://picsum.photos/400/300?random=5",
+        },
+      ];
+
+      const offers = [
+        {
+          id: 1,
+          title: "Maldives Escape",
+          description: "7 Days / 6 Nights at luxury water villa",
+          price: "₹59,999",
+          originalPrice: "₹85,999",
+          discount: "30% OFF",
+          image: "https://picsum.photos/600/400?random=6",
+        },
+        {
+          id: 2,
+          title: "Thailand Discovery",
+          description: "8 Days / 7 Nights Bangkok & Phuket",
+          price: "₹42,999",
+          originalPrice: "₹57,999",
+          discount: "25% OFF",
+          image: "https://picsum.photos/600/400?random=7",
+        },
+        {
+          id: 3,
+          title: "European Wonders",
+          description: "10 Days / 9 Nights 4 Countries Tour",
+          price: "₹1,25,999",
+          originalPrice: "₹1,57,999",
+          discount: "20% OFF",
+          image: "https://picsum.photos/600/400?random=8",
+        },
+      ];
+
+      const testimonials = [
+        {
+          id: 1,
+          name: "Rajesh Kumar",
+          rating: 5,
+          comment:
+            "Our Swiss trip was perfectly organized. Every detail was taken care of, and the hotels were excellent. Highly recommended!",
+          image: "https://picsum.photos/100?random=9",
+        },
+        {
+          id: 2,
+          name: "Priya Sharma",
+          rating: 4.5,
+          comment:
+            "Bali honeymoon package exceeded our expectations. The private villa was amazing and the service was impeccable.",
+          image: "https://picsum.photos/100?random=10",
+        },
+        {
+          id: 3,
+          name: "Amit Patel",
+          rating: 5,
+          comment:
+            "Dubai luxury tour was worth every penny. The desert safari and Burj Khalifa experience were unforgettable!",
+          image: "https://picsum.photos/100?random=11",
+        },
+      ];
+
+      // Mobile menu toggle
+      const mobileMenuButton = document.getElementById("mobileMenuButton");
+      const mobileMenu = document.getElementById("mobileMenu");
+
+      if (mobileMenuButton && mobileMenu) {
+        mobileMenuButton.addEventListener("click", function () {
+          mobileMenu.classList.toggle("hidden");
+        });
+
+        // Close mobile menu when clicking outside
+        document.addEventListener("click", function (event) {
+          if (
+            !mobileMenu.contains(event.target) &&
+            !mobileMenuButton.contains(event.target)
+          ) {
+            mobileMenu.classList.add("hidden");
+          }
+        });
+      }
+
+      // Cookie consent functions
+      function acceptCookies() {
+        const cookieConsent = document.getElementById("cookieConsent");
+        if (cookieConsent) {
+          cookieConsent.style.display = "none";
+          localStorage.setItem("cookiesAccepted", "true");
+        }
+      }
+
+      function declineCookies() {
+        const cookieConsent = document.getElementById("cookieConsent");
+        if (cookieConsent) {
+          cookieConsent.style.display = "none";
+          localStorage.setItem("cookiesAccepted", "false");
+        }
+      }
+
+      // Check if cookies were already accepted
+      document.addEventListener("DOMContentLoaded", function () {
+        const cookiesAccepted = localStorage.getItem("cookiesAccepted");
+        if (cookiesAccepted === "true") {
+          const cookieConsent = document.getElementById("cookieConsent");
+          if (cookieConsent) {
+            cookieConsent.style.display = "none";
+          }
+        }
+
+        // Smooth scroll for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
+          anchor.addEventListener("click", function (e) {
+            e.preventDefault();
+            const targetId = this.getAttribute("href");
+            if (targetId === "#") return;
+
+            const targetElement = document.querySelector(targetId);
+            if (targetElement) {
+              targetElement.scrollIntoView({
+                behavior: "smooth",
+                block: "start",
+              });
+            }
+          });
+        });
+
+        // Form submission handling
+        const newsletterForm = document.querySelector("form");
+        if (newsletterForm) {
+          newsletterForm.addEventListener("submit", function (e) {
+            e.preventDefault();
+            const email = this.querySelector("input[type='email']").value;
+            if (email) {
+              alert("Thank you for subscribing to our newsletter!");
+              this.reset();
+            }
+          });
+        }
+
+        // Search form handling
+        const searchForm = document.querySelector(".hero-gradient form");
+        if (searchForm) {
+          searchForm.addEventListener("submit", function (e) {
+            e.preventDefault();
+            const destination = this.querySelector(
+              "input[placeholder='Where do you want to go?']",
+            ).value;
+            const date = this.querySelector(
+              "input[placeholder='Select Dates']",
+            ).value;
+            const type = this.querySelector("select").value;
+
+            alert(
+              `Searching for ${destination || "any destination"}${date ? " on " + date : ""}${type ? " (" + type + ")" : ""}`,
+            );
+          });
+        }
+      });
+    </script>
+    <script>
+      // ===== SCROLL REVEAL =====
+      const reveals = document.querySelectorAll(".reveal");
+
+      function revealOnScroll() {
+        const windowHeight = window.innerHeight;
+        reveals.forEach((el) => {
+          const top = el.getBoundingClientRect().top;
+          if (top < windowHeight - 100) {
+            el.classList.add("active");
+          }
+        });
+      }
+      window.addEventListener("scroll", revealOnScroll);
+      revealOnScroll();
+
+      // ===== HERO PARALLAX =====
+      window.addEventListener("scroll", () => {
+        const scrolled = window.pageYOffset;
+        document.querySelectorAll(".parallax").forEach((el) => {
+          el.style.transform = `translateY(${scrolled * 0.3}px)`;
+        });
+      });
+    </script>
+    
+    <script>
+document.addEventListener("DOMContentLoaded", () => {
+  fetch("https://sbnl-website.onrender.com/api/packages")
+    .then(res => res.json())
+    .then(data => {
+      const container = document.getElementById("packageContainer");
+
+      data.forEach(pkg => {
+        container.innerHTML += `
+  <div class="bg-white border border-orange-100 rounded-xl shadow-lg overflow-hidden reveal active">
+    <img src="https://sbnl-website.onrender.com/uploads/${pkg.image}" class="w-full h-48 object-cover"/>
+
+    <div class="p-4 text-left">
+      <h3 class="font-bold text-lg text-gray-800">${pkg.title}</h3>
+      <p class="text-gray-600">${pkg.location}</p>
+
+      <div class="flex justify-between mt-3 items-center">
+        <span class="text-primary font-bold">₹${pkg.offerPrice}</span>
+        <a href="package.html?id=${pkg._id}" class="text-accent font-semibold">Explore →</a>
+      </div>
+    </div>
+  </div>
+`;
+
+      });
+    })
+    .catch(err => console.log(err));
+});
+</script>
+
+   <section class="py-16 bg-white">
+      <!-- <div class="container mx-auto px-4"> -->
+        <!-- <div class="text-center mb-12">
+          <h2 class="text-3xl md:text-4xl font-serif font-bold text-dark mb-4">
+            Featured Destinations
+          </h2>
+          <p class="text-gray-600 max-w-2xl mx-auto">
+            Explore our most popular destinations handpicked by travel experts
+          </p>
+        </div> -->
+
+      
+          <div
+            id="packageContainer"
+            class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"
+          ></div>
+
+          <!-- Destination 1 -->
+          <!-- <div
+            class="card-hover bg-white rounded-xl overflow-hidden shadow-lg reveal reveal-left glow"
+          >
+            <div class="relative h-48">
+              <img
+                src="assets/images/dubai.jpg.jpg"
+                alt="Dubai skyline with modern architecture"
+                class="w-full h-full object-cover"
+                loading="lazy"
+              />
+              <div class="absolute top-4 right-4">
+                <span
+                  class="bg-primary text-white px-3 py-1 rounded-full text-sm font-medium"
+                  >Popular</span
+                >
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-dark mb-2">Dubai</h3>
+              <p class="text-gray-600 mb-4">
+                Luxury skyline & desert experiences
+              </p>
+              <div class="flex justify-between items-center">
+                <span class="text-primary font-bold">From ₹59,999</span>
+                <a
+                  href="pages/dubai.html"
+                  class="text-secondary hover:text-primary font-medium"
+                  >Explore →</a
+                >
+              </div>
+            </div>
+          </div> -->
+
+          <!-- Destination 2 -->
+          <!-- <div
+            class="card-hover bg-white rounded-xl overflow-hidden shadow-lg reveal reveal-left glow"
+          >
+            <div class="relative h-48">
+              <img
+                src="assets/images/bangkok.jpg.jpg"
+                alt="Bali tropical beach with palm trees"
+                class="w-full h-full object-cover"
+                loading="lazy"
+              />
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-dark mb-2">Bangkok</h3>
+              <p class="text-gray-600 mb-4">
+                Vibrant city with rich culture and nightlife
+              </p>
+              <div class="flex justify-between items-center">
+                <span class="text-primary font-bold">From ₹59,999</span>
+                <a
+                  href="pages/bangkok.html"
+                  class="text-secondary hover:text-primary font-medium"
+                  >Explore →</a
+                >
+              </div>
+            </div>
+          </div> -->
+
+          <!-- Destination 3 -->
+          <!-- <div
+            class="card-hover bg-white rounded-xl overflow-hidden shadow-lg reveal reveal-left glow"
+          >
+            <div class="relative h-48">
+              <img
+                src="assets/images/pattaya/pattaya.jpg"
+                alt="Dubai skyline with modern architecture"
+                class="w-full h-full object-cover"
+                loading="lazy"
+              />
+              <div class="absolute top-4 right-4">
+                <span
+                  class="bg-primary text-white px-3 py-1 rounded-full text-sm font-medium"
+                  >Luxury</span
+                >
+              </div>
+            </div>
+            <div class="p-6">
+              <h3 class="text-xl font-bold text-dark mb-2">Pattaya</h3>
+              <p class="text-gray-600 mb-4">
+                Beach city known for vibrant nightlife and water sports
+              </p>
+              <div class="flex justify-between items-center">
+                <span class="text-primary font-bold">From ₹59,999</span>
+                <a
+                  href="pages/pattaya.html"
+                  class="text-secondary hover:text-primary font-medium"
+                  >Explore →</a
+                >
+              </div>
+            </div>
+          </div> -->
+        </div>
+
+        <div class="text-center mt-10">
+          <!-- <a
+            href="#"
+            class="inline-flex items-center text-primary font-medium hover:text-secondary"
+          >
+            View All Destinations
+            <i class="fas fa-arrow-right ml-2"></i>
+          </a> -->
+        </div>
+      </div>
+    </section>
+
+    <script>
+fetch("header.html")
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById("header").innerHTML = data;
+
+    // Re-attach mobile menu toggle after loading
+    const mobileMenuButton = document.getElementById("mobileMenuButton");
+    const mobileMenu = document.getElementById("mobileMenu");
+
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+    }
+  });
+</script>
+
+  </body>
+</html>

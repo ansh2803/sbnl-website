@@ -1,0 +1,736 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FOCO Model | SBNL Holidays</title>
+    <link rel="icon" type="image/svg+xml" href="favicon/favicon.svg" />
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+/>
+
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+           colors: {
+          primary: "#F97316",     // ORANGE (main)
+          secondary: "#EA580C",   // DARK ORANGE
+          accent: "#1D4ED8",      // BLUE (only small highlights)
+          dark: "#1F2937",
+         light: "#FFFFFF",
+},
+
+            fontFamily: {
+              sans: ["Poppins", "system-ui", "-apple-system"],
+              serif: ["Playfair Display", "Georgia", "serif"],
+            },
+            animation: {
+              "fade-in": "fadeIn 0.5s ease-in-out",
+              "slide-up": "slideUp 0.3s ease-out",
+            },
+            keyframes: {
+              fadeIn: {
+                "0%": { opacity: "0" },
+                "100%": { opacity: "1" },
+              },
+              slideUp: {
+                "0%": { transform: "translateY(10px)", opacity: "0" },
+                "100%": { transform: "translateY(0)", opacity: "1" },
+              },
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- Smooth animation -->
+    <style>
+      body {
+  font-family: 'Poppins', sans-serif;
+}
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'Playfair Display', serif;
+      }
+      .fade-up {
+        opacity: 0;
+        transform: translateY(40px);
+        transition: all 0.8s ease;
+      }
+      .fade-up.show {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    </style>
+    <style>
+      body {
+  font-family: 'Poppins', sans-serif;
+}
+      h1, h2, h3, h4, h5, h6 {
+        font-family: 'Playfair Display', serif;
+      }
+      .premium-card {
+        transition: all 0.4s ease;
+        transform: perspective(1000px) rotateX(0) rotateY(0);
+      }
+      .premium-card:hover {
+        transform: perspective(1000px) rotateX(4deg) rotateY(-4deg) scale(1.04);
+        box-shadow: 0 25px 50px rgba(0, 0, 0, 0.25);
+      }
+    </style>
+  </head>
+
+  <body class="bg-gray-50 text-gray-800">
+    <!-- ================= NAVBAR (same as before) ================= -->
+   <div id="header"></div>
+
+<!-- ================= complet ================= -->
+ <section class="py-28 bg-gradient-to-br from-white via-blue-50 to-orange-50 relative overflow-hidden">
+  <!-- Hero background accents -->
+  <div class="absolute -top-40 -left-40 w-[600px] h-[600px] bg-blue-300 opacity-20 blur-[140px] rounded-full"></div>
+  <div class="absolute -bottom-40 -right-40 w-[600px] h-[600px] bg-orange-300 opacity-20 blur-[140px] rounded-full"></div>
+
+  <div class="max-w-7xl mx-auto px-6 relative z-10">
+    <!-- Badge -->
+    <div class="mb-6">
+      <span
+        class="inline-flex items-center gap-2 px-5 py-2 rounded-full
+               bg-accent/10 text-accent text-sm font-semibold"
+      >
+        💼 BUSINESS FRAMEWORK
+      </span>
+    </div>
+
+    <!-- Heading -->
+    <h2 class="text-4xl md:text-6xl font-extrabold text-dark leading-tight max-w-5xl">
+      FOCO Business Model
+      <span class="block text-primary mt-2">
+        Franchise Owned, Company Operated
+      </span>
+    </h2>
+
+    <!-- Subheading -->
+    <p class="text-lg md:text-xl text-gray-600 max-w-4xl mt-6">
+      A professionally structured travel franchise model where partners own the
+      business while SBNL Holidays Pvt. Ltd. manages operations, bookings,
+      customer support, and execution — delivering consistency, scalability,
+      and reduced operational risk.
+    </p>
+
+    <!-- Key Pillars -->
+    <div class="grid md:grid-cols-4 gap-8 mt-16">
+      <!-- Pillar 1 -->
+      <div
+        class="bg-white/80 backdrop-blur-xl rounded-2xl p-8 shadow-xl border border-white"
+      >
+        <div class="w-12 h-12 mb-4 rounded-xl bg-primary/10 text-primary flex items-center justify-center font-bold text-lg">
+          🏢
+        </div>
+        <h4 class="font-bold text-dark text-lg mb-2">
+          Franchise Ownership
+        </h4>
+        <p class="text-gray-600 text-sm">
+          The franchise is fully owned by the Area Distributor with defined
+          territorial rights.
+        </p>
+      </div>
+
+      <!-- Pillar 2 -->
+      <div
+        class="bg-white/80 backdrop-blur-xl rounded-2xl p-8 shadow-xl border border-white"
+      >
+        <div class="w-12 h-12 mb-4 rounded-xl bg-accent/10 text-accent flex items-center justify-center font-bold text-lg">
+          ⚙️
+        </div>
+        <h4 class="font-bold text-dark text-lg mb-2">
+          Company Operations
+        </h4>
+        <p class="text-gray-600 text-sm">
+          End-to-end operations including bookings, travel execution, and
+          customer servicing handled centrally by SBNL.
+        </p>
+      </div>
+
+      <!-- Pillar 3 -->
+      <div
+        class="bg-white/80 backdrop-blur-xl rounded-2xl p-8 shadow-xl border border-white"
+      >
+        <div class="w-12 h-12 mb-4 rounded-xl bg-primary/10 text-primary flex items-center justify-center font-bold text-lg">
+          🛡️
+        </div>
+        <h4 class="font-bold text-dark text-lg mb-2">
+          Lower Operational Risk
+        </h4>
+        <p class="text-gray-600 text-sm">
+          Centralized execution minimizes operational, compliance, and delivery
+          risks for partners.
+        </p>
+      </div>
+
+      <!-- Pillar 4 -->
+      <div
+        class="bg-white/80 backdrop-blur-xl rounded-2xl p-8 shadow-xl border border-white"
+      >
+        <div class="w-12 h-12 mb-4 rounded-xl bg-accent/10 text-accent flex items-center justify-center font-bold text-lg">
+          📈
+        </div>
+        <h4 class="font-bold text-dark text-lg mb-2">
+          Scalable Growth Model
+        </h4>
+        <p class="text-gray-600 text-sm">
+          Designed for expansion across multiple territories with predictable
+          performance and long-term growth potential.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+    <!-- AREA DISTRIBUTOR PLAN SECTION -->
+  <section class="py-24 bg-gradient-to-br from-slate-50 via-orange-50 to-blue-50 relative overflow-hidden">
+  <!-- Decorative glow blobs -->
+  <div class="absolute -top-24 -left-24 w-96 h-96 bg-orange-200 opacity-30 blur-3xl rounded-full"></div>
+  <div class="absolute -bottom-24 -right-24 w-96 h-96 bg-blue-200 opacity-30 blur-3xl rounded-full"></div>
+
+  <div class="max-w-7xl mx-auto px-6 relative z-10">
+    <!-- Heading -->
+    <div class="text-center mb-16">
+      <span class="inline-block px-4 py-1 text-sm font-semibold rounded-full bg-primary/10 text-primary mb-4">
+        FOCO INVESTMENT STRUCTURE
+      </span>
+      <h2 class="text-4xl md:text-5xl font-extrabold text-dark mb-4">
+        Area Distributor Investment Plan
+      </h2>
+      <p class="text-gray-600 max-w-3xl mx-auto">
+        A transparent, secured, and professionally structured investment model
+        designed for long-term partnership and predictable returns.
+      </p>
+    </div>
+
+    <!-- TOP METRICS -->
+    <div class="grid md:grid-cols-3 gap-8 mb-10">
+      <!-- Investment -->
+      <div class="bg-white/80 backdrop-blur-xl rounded-2xl p-8 shadow-xl border border-white">
+        <div class="flex items-center gap-4 mb-4">
+          <div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center text-xl font-bold">
+            ₹
+          </div>
+          <h4 class="text-lg font-semibold text-gray-700">Total Investment</h4>
+        </div>
+        <p class="text-3xl font-extrabold text-dark">₹10,00,000</p>
+        <p class="text-sm text-gray-500 mt-1">(Fully Refundable Security)</p>
+      </div>
+
+      <!-- Tenure -->
+      <div class="bg-white/80 backdrop-blur-xl rounded-2xl p-8 shadow-xl border border-white">
+        <div class="flex items-center gap-4 mb-4">
+          <div class="w-12 h-12 rounded-xl bg-blue-100 text-accent flex items-center justify-center text-xl font-bold">
+            ⏳
+          </div>
+          <h4 class="text-lg font-semibold text-gray-700">Agreement Tenure</h4>
+        </div>
+        <p class="text-3xl font-extrabold text-dark">1 Year</p>
+        <p class="text-sm text-gray-500 mt-1">Renewable on mutual consent</p>
+      </div>
+
+      <!-- ROI -->
+      <div class="bg-gradient-to-br from-primary to-secondary text-white rounded-2xl p-8 shadow-2xl">
+        <div class="flex items-center gap-4 mb-4">
+          <div class="w-12 h-12 rounded-xl bg-white/20 flex items-center justify-center text-xl font-bold">
+            %
+          </div>
+          <h4 class="text-lg font-semibold">Guaranteed ROI</h4>
+        </div>
+        <p class="text-4xl font-extrabold">18% <span class="text-lg font-medium">p.a.*</span></p>
+        <p class="text-sm opacity-90 mt-1">
+          Paid as per agreement terms
+        </p>
+      </div>
+    </div>
+
+    <!-- SECOND ROW -->
+    <div class="grid md:grid-cols-2 gap-8">
+      <!-- Franchise Fee -->
+      <div class="bg-white/80 backdrop-blur-xl rounded-2xl p-8 shadow-xl border border-white">
+        <h4 class="text-xl font-bold text-dark mb-2">
+          Franchise Fees
+        </h4>
+        <p class="text-2xl font-extrabold text-primary">₹3,00,000</p>
+        <p class="text-gray-600 mt-2">
+          One-time fee for brand usage, onboarding, training, and system access.
+        </p>
+      </div>
+
+      <!-- Territory -->
+      <div class="bg-white/80 backdrop-blur-xl rounded-2xl p-8 shadow-xl border border-white">
+        <h4 class="text-xl font-bold text-dark mb-2">
+          Exclusive Territory Rights
+        </h4>
+        <p class="text-gray-700 font-medium">
+          Pin-code based area allotment ensuring zero internal competition.
+        </p>
+        <ul class="mt-3 text-sm text-gray-600 space-y-1">
+          <li>• Defined operational boundaries</li>
+          <li>• Territory protection clause</li>
+          <li>• Long-term expansion opportunity</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ================= PACKAGE ALLOCATION(100PACKAGES)================= -->
+ <section class="py-24 bg-gradient-to-br from-white via-orange-50 to-blue-50 relative overflow-hidden">
+  <!-- Soft background accents -->
+  <div class="absolute -top-32 right-0 w-96 h-96 bg-orange-200 opacity-20 blur-3xl rounded-full"></div>
+  <div class="absolute -bottom-32 left-0 w-96 h-96 bg-blue-200 opacity-20 blur-3xl rounded-full"></div>
+
+  <div class="max-w-6xl mx-auto px-6 relative z-10 text-center">
+    <!-- Heading -->
+    <span class="inline-block px-4 py-1 mb-4 text-sm font-semibold rounded-full bg-primary/10 text-primary">
+      DISTRIBUTION CAPACITY
+    </span>
+
+    <h2 class="text-4xl md:text-5xl font-extrabold text-dark mb-6">
+      Package Allocation Structure
+    </h2>
+
+    <p class="text-gray-600 max-w-3xl mx-auto mb-14">
+      Each Area Distributor is allocated a fixed number of tour packages to
+      maintain controlled growth, predictable earnings, and streamlined
+      operational execution under the FOCO model.
+    </p>
+
+    <!-- Main Stat -->
+    <div class="inline-block bg-white/80 backdrop-blur-xl rounded-3xl px-20 py-14 shadow-2xl border border-white">
+      <p class="text-7xl md:text-8xl font-extrabold text-primary leading-none">
+        100
+      </p>
+      <p class="uppercase tracking-widest text-sm text-gray-700 mt-4 font-semibold">
+        Packages Per Distributor
+      </p>
+    </div>
+
+    <!-- Supporting Points -->
+    <div class="grid md:grid-cols-3 gap-8 mt-16 text-left">
+      <div class="bg-white rounded-xl p-6 shadow border-l-4 border-primary">
+        <h4 class="font-bold text-dark mb-2">Controlled Sales Volume</h4>
+        <p class="text-gray-600 text-sm">
+          Limited package allocation ensures focused selling and avoids market
+          saturation within the allotted territory.
+        </p>
+      </div>
+
+      <div class="bg-white rounded-xl p-6 shadow border-l-4 border-accent">
+        <h4 class="font-bold text-dark mb-2">Predictable Earnings</h4>
+        <p class="text-gray-600 text-sm">
+          Defined inventory allows accurate revenue forecasting and return
+          planning for distributors.
+        </p>
+      </div>
+
+      <div class="bg-white rounded-xl p-6 shadow border-l-4 border-primary">
+        <h4 class="font-bold text-dark mb-2">Operational Clarity</h4>
+        <p class="text-gray-600 text-sm">
+          Clear package limits simplify tracking, reporting, and performance
+          monitoring under the FOCO framework.
+        </p>
+      </div>
+    </div>
+  </div>
+</section>
+<!--EARNING STRUCTURE-->
+<section class="py-24 bg-gradient-to-br from-orange-50 via-white to-blue-50 relative overflow-hidden">
+  <!-- Background accents -->
+  <div class="absolute -top-32 left-0 w-96 h-96 bg-orange-200 opacity-20 blur-3xl rounded-full"></div>
+  <div class="absolute -bottom-32 right-0 w-96 h-96 bg-blue-200 opacity-20 blur-3xl rounded-full"></div>
+
+  <div class="max-w-7xl mx-auto px-6 relative z-10 grid md:grid-cols-2 gap-16 items-center">
+    <!-- LEFT CONTENT -->
+    <div>
+      <span class="inline-block px-4 py-1 mb-4 text-sm font-semibold rounded-full bg-primary/10 text-primary">
+        REVENUE MECHANISM
+      </span>
+
+      <h2 class="text-4xl md:text-5xl font-extrabold text-dark mb-10">
+        Sales & Earnings Structure
+      </h2>
+
+      <div class="space-y-8">
+        <!-- Step 1 -->
+        <div class="bg-white rounded-xl p-6 shadow border-l-4 border-primary">
+          <div class="flex items-start gap-4">
+            <div class="text-primary font-extrabold text-xl">01</div>
+            <div>
+              <h4 class="font-bold text-dark mb-1">
+                Package Allocation
+              </h4>
+              <p class="text-gray-600 text-sm">
+                Each Area Distributor is allocated
+                <b>100 international tour packages</b> for sales within their
+                exclusive territory.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 2 -->
+        <div class="bg-white rounded-xl p-6 shadow border-l-4 border-accent">
+          <div class="flex items-start gap-4">
+            <div class="text-accent font-extrabold text-xl">02</div>
+            <div>
+              <h4 class="font-bold text-dark mb-1">
+                Per Sale Investment Adjustment
+              </h4>
+              <p class="text-gray-600 text-sm">
+                On every successful booking,
+                <b>₹10,000 is adjusted</b> from the deposited amount, applicable
+                for up to 100 sales.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Step 3 -->
+        <div class="bg-white rounded-xl p-6 shadow border-l-4 border-primary">
+          <div class="flex items-start gap-4">
+            <div class="text-primary font-extrabold text-xl">03</div>
+            <div>
+              <h4 class="font-bold text-dark mb-1">
+                Commission Income
+              </h4>
+              <p class="text-gray-600 text-sm">
+                In addition to adjustment benefits, distributors earn
+                <b>5% commission</b> on every successfully completed tour
+                package.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- RIGHT SUMMARY CARD -->
+    <div class="bg-white/80 backdrop-blur-xl rounded-3xl p-10 shadow-2xl border border-white">
+      <h4 class="text-2xl font-extrabold text-dark mb-6">
+        Multiple Revenue Streams
+      </h4>
+
+      <ul class="space-y-4 text-gray-700">
+        <li class="flex items-start gap-3">
+          <span class="text-primary font-bold text-lg">✔</span>
+          <span>
+            <b>Fixed ROI Returns</b> on deposited investment as per agreement.
+          </span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-primary font-bold text-lg">✔</span>
+          <span>
+            <b>Capital Recovery</b> through per-sale adjustment mechanism.
+          </span>
+        </li>
+        <li class="flex items-start gap-3">
+          <span class="text-primary font-bold text-lg">✔</span>
+          <span>
+            <b>Commission Income</b> from every successful package booking.
+          </span>
+        </li>
+      </ul>
+
+      <div class="mt-8 p-4 rounded-xl bg-primary/10 text-primary text-sm font-semibold text-center">
+        This structure ensures earnings through <br />
+        <span class="font-extrabold">returns + recovery + commissions</span>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- ================= ANOTHER SECTION ================= -->
+ <section class="py-24 bg-gradient-to-br from-white via-blue-50 to-orange-50 relative overflow-hidden">
+  <!-- Soft background accents -->
+  <div class="absolute -top-32 left-0 w-96 h-96 bg-blue-200 opacity-20 blur-3xl rounded-full"></div>
+  <div class="absolute -bottom-32 right-0 w-96 h-96 bg-orange-200 opacity-20 blur-3xl rounded-full"></div>
+
+  <div class="max-w-7xl mx-auto px-6 relative z-10">
+    <!-- Heading -->
+    <div class="text-center mb-16">
+      <span class="inline-block px-4 py-1 mb-4 text-sm font-semibold rounded-full bg-accent/10 text-accent">
+        CUSTOMER VALUE SYSTEM
+      </span>
+
+      <h2 class="text-4xl md:text-5xl font-extrabold text-dark mb-4">
+        Customer Cashback Benefits
+      </h2>
+
+      <p class="text-gray-600 max-w-3xl mx-auto">
+        A structured cashback mechanism designed to enhance customer retention,
+        long-term engagement, and trust in the SBNL Holidays ecosystem.
+      </p>
+    </div>
+
+    <!-- Cashback Cards -->
+    <div class="grid md:grid-cols-3 gap-8">
+      <!-- 3% Cashback -->
+      <div class="bg-white/80 backdrop-blur-xl rounded-2xl p-8 shadow-xl border border-white">
+        <div class="flex items-center gap-4 mb-4">
+          <div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center font-extrabold text-lg">
+            %
+          </div>
+          <h4 class="text-xl font-bold text-dark">
+            3% Monthly Cashback
+          </h4>
+        </div>
+        <p class="text-gray-600 text-sm">
+          Customers receive a fixed <b>3% cashback every month</b> on the
+          remaining package amount, credited systematically.
+        </p>
+      </div>
+
+      <!-- 33 Months -->
+      <div class="bg-white/80 backdrop-blur-xl rounded-2xl p-8 shadow-xl border border-white">
+        <div class="flex items-center gap-4 mb-4">
+          <div class="w-12 h-12 rounded-xl bg-accent/10 text-accent flex items-center justify-center font-extrabold text-lg">
+            33
+          </div>
+          <h4 class="text-xl font-bold text-dark">
+            Cashback Duration
+          </h4>
+        </div>
+        <p class="text-gray-600 text-sm">
+          Cashback is distributed over a long-term period of
+          <b>33 consecutive months</b>, ensuring consistent value delivery.
+        </p>
+      </div>
+
+      <!-- 36 Months -->
+      <div class="bg-white/80 backdrop-blur-xl rounded-2xl p-8 shadow-xl border border-white">
+        <div class="flex items-center gap-4 mb-4">
+          <div class="w-12 h-12 rounded-xl bg-primary/10 text-primary flex items-center justify-center font-extrabold text-lg">
+            36
+          </div>
+          <h4 class="text-xl font-bold text-dark">
+            Package Validity
+          </h4>
+        </div>
+        <p class="text-gray-600 text-sm">
+          The travel package remains valid for
+          <b>36 months</b>, giving customers complete flexibility in planning.
+        </p>
+      </div>
+    </div>
+
+    <!-- Bottom Highlight -->
+    <div class="mt-16 max-w-4xl mx-auto bg-primary/10 border border-primary/20 rounded-2xl p-6 text-center">
+      <p class="text-gray-700 font-medium">
+        This cashback model strengthens customer confidence, improves repeat
+        engagement, and supports sustainable business growth for Area
+        Distributors.
+      </p>
+    </div>
+  </div>
+</section>
+<!-- ================= FOOTER (same as before) ================= -->
+ <section class="py-24 bg-gradient-to-br from-blue-50 via-white to-orange-50 relative overflow-hidden">
+  <!-- Luxury background elements -->
+  <div class="absolute -top-40 left-0 w-[500px] h-[500px] bg-blue-300 opacity-20 blur-[120px] rounded-full"></div>
+  <div class="absolute -bottom-40 right-0 w-[500px] h-[500px] bg-orange-300 opacity-20 blur-[120px] rounded-full"></div>
+
+  <div class="max-w-6xl mx-auto px-6 relative z-10">
+    <!-- Section Header -->
+    <div class="text-center mb-14">
+      <span
+        class="inline-flex items-center gap-2 px-5 py-2 rounded-full text-sm font-semibold
+               bg-accent/10 text-accent mb-4"
+      >
+        <svg xmlns="http://www.w3.org/2000/svg" class="w-4 h-4" fill="none"
+             viewBox="0 0 24 24" stroke="currentColor">
+          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                d="M12 11c0-3.866-3.134-7-7-7m14 0c-3.866 0-7 3.134-7 7m0 0v7m0-7h7m-7 0H5" />
+        </svg>
+        LEGAL & COMPLIANCE DISCLOSURE
+      </span>
+
+      <h3 class="text-4xl md:text-5xl font-extrabold text-dark mb-4">
+        Transparency & Important Notes
+      </h3>
+
+      <p class="text-gray-600 max-w-4xl mx-auto text-lg">
+        At SBNL Holidays Pvt. Ltd., we follow a structured, transparent, and
+        compliance-driven FOCO framework to protect the interests of our
+        partners and ensure long-term sustainability.
+      </p>
+    </div>
+
+    <!-- Disclosure Card -->
+    <div
+      class="bg-white/80 backdrop-blur-2xl rounded-3xl shadow-2xl
+             border border-white p-10 md:p-12"
+    >
+      <ul class="space-y-6 text-gray-700">
+        <li class="flex items-start gap-4">
+          <span class="w-2 h-2 mt-2 rounded-full bg-primary"></span>
+          <p>
+            All ROI figures mentioned are indicative and governed strictly by
+            the executed agreement, business performance, and operational
+            timelines.
+          </p>
+        </li>
+
+        <li class="flex items-start gap-4">
+          <span class="w-2 h-2 mt-2 rounded-full bg-accent"></span>
+          <p>
+            Area and pin-code based territory allotment is subject to
+            availability and internal approval to maintain exclusivity and
+            fair distribution.
+          </p>
+        </li>
+
+        <li class="flex items-start gap-4">
+          <span class="w-2 h-2 mt-2 rounded-full bg-primary"></span>
+          <p>
+            All financial structures, earnings logic, obligations, and
+            deliverables are formally documented and executed prior to
+            onboarding any Area Distributor.
+          </p>
+        </li>
+
+        <li class="flex items-start gap-4">
+          <span class="w-2 h-2 mt-2 rounded-full bg-accent"></span>
+          <p>
+            SBNL Holidays Pvt. Ltd. reserves the right to amend, enhance, or
+            restructure business schemes in alignment with market conditions,
+            regulatory changes, and long-term operational strategy.
+          </p>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Final Trust Statement -->
+    <div class="mt-14 text-center">
+      <p class="text-sm md:text-base text-gray-500 max-w-3xl mx-auto">
+        This disclosure is presented to reinforce our commitment to ethical
+        business practices, operational clarity, and mutually beneficial
+        long-term partnerships under the FOCO model.
+      </p>
+    </div>
+  </div>
+</section>
+
+    <!-- ================= ANIMATION SCRIPT ================= -->
+    <script>
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("show");
+          }
+        });
+      });
+
+      document.querySelectorAll(".fade-up").forEach((el) => {
+        observer.observe(el);
+      });
+    </script>
+    <script>
+      const menuBtn = document.getElementById("menuBtn");
+      const mobileMenu = document.getElementById("mobileMenu");
+
+      if (menuBtn && mobileMenu) {
+        menuBtn.addEventListener("click", () => {
+          mobileMenu.classList.toggle("hidden");
+        });
+      }
+    </script>
+    <script>
+document.getElementById("enquiryForm").addEventListener("submit", function(e){
+  e.preventDefault();
+  const name = name.value;
+  const phone = phone.value;
+  const city = city.value;
+  const area = area.value;
+
+  const msg =
+    `New Area Distributor Enquiry:%0A` +
+    `Name: ${name}%0A` +
+    `Phone: ${phone}%0A` +
+    `City: ${city}%0A` +
+    `Interested Area: ${area}`;
+
+  window.open(`https://wa.me/919837066698?text=${msg}`, "_blank");
+});
+</script>
+   <script>
+fetch("header.html")
+  .then(res => res.text())
+  .then(data => {
+    document.getElementById("header").innerHTML = data;
+
+    // Re-attach mobile menu toggle after loading
+    const mobileMenuButton = document.getElementById("mobileMenuButton");
+    const mobileMenu = document.getElementById("mobileMenu");
+
+    if (mobileMenuButton && mobileMenu) {
+      mobileMenuButton.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+    }
+  });
+</script>
+<!-- Sticky Apply Now Ribbon -->
+<div
+  id="applyRibbon"
+  class="fixed bottom-0 left-0 right-0 z-50 bg-gradient-to-r from-accent via-primary to-secondary text-white shadow-2xl"
+>
+  <div
+    class="max-w-7xl mx-auto px-6 py-4 flex flex-col md:flex-row items-center justify-between gap-4"
+  >
+    <!-- Left Content -->
+    <div class="flex items-center gap-3 text-center md:text-left">
+      <div
+        class="w-10 h-10 rounded-full bg-white/20 flex items-center justify-center font-bold text-lg"
+      >
+        🚀
+      </div>
+      <div>
+        <p class="font-semibold text-sm md:text-base">
+          Become an Area Distributor with SBNL Holidays
+        </p>
+        <p class="text-xs md:text-sm opacity-90">
+          Limited territories • Structured FOCO model • Guaranteed ROI*
+        </p>
+      </div>
+    </div>
+
+    <!-- CTA Buttons -->
+    <div class="flex items-center gap-3">
+      <!-- Scroll to Form -->
+      <a
+        href="contact.html"
+        class="px-6 py-2.5 bg-white text-primary font-bold rounded-full shadow-lg hover:scale-105 transition"
+      >
+        Apply Now
+      </a>
+
+      <!-- WhatsApp CTA -->
+      <a
+        href="https://wa.me/919837066698"
+        target="_blank"
+        class="px-6 py-2.5 bg-white/10 border border-white/40 rounded-full font-semibold hover:bg-white/20 transition"
+      >
+        WhatsApp
+      </a>
+    </div>
+  </div>
+</div>
+
+      
+
+  </body>
+</html>
